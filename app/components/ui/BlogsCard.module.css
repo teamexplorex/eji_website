@@ -1,0 +1,26 @@
+.blogs_card > img {
+  width: 60rem;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+}
+
+.blogs_card > h3 {
+  font-family: "Rubik";
+  font-weight: 500;
+}
+
+.blogs_card > p {
+  width: 60rem;
+  color: var(--color-text-secondory);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .blogs_card > img{
+    width: 100%;
+  }
+
+  .blogs_card > p {
+    width: 100%;
+  }
+}

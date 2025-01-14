@@ -1,0 +1,85 @@
+.package-history-cmp {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.package-history-cmp > h1 {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.package-history-cmp > p {
+  color: var(--color-text-secondory);
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.history_tab {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.history_tab > div {
+  flex: 1;
+}
+
+.SendUsAMessage {
+  box-shadow: 0px 2px 7px 0px #0000001c;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  width: 20rem;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.SendUsAMessage > div > img {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.SendUsAMessage {
+  padding: 5px;
+}
+
+.SendUsAMessage > div > h1 {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.SendUsAMessage > div > p {
+  color: var(--color-text-secondory);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.SendUsAMessage > div > button {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 950px) {
+  .package-history-cmp {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media(max-width: 500px){
+  .package-history-cmp > h1{
+    font-size: 1.2rem;
+  }
+  .package-history-cmp > p{
+    font-size: 0.9rem;
+  }
+}

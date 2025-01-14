@@ -1,0 +1,85 @@
+.packageFilter > ul,
+.packageFilter > ul > span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.packageFilter {
+  margin-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.packageFilter > ul {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  display: flex;
+  white-space: nowrap; /* Prevent items from wrapping */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.packageFilter > ul::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers */
+}
+.packageFilter > ul::-webkit-scrollbar {
+  height: 6px; /* Adjust scrollbar height */
+}
+
+.packageFilter > ul::-webkit-scrollbar-thumb {
+  background: var(
+    --color-background-light
+  ); /* Customize scrollbar thumb color */
+  border-radius: 4px; /* Make it rounded */
+}
+
+.packageFilter > ul::-webkit-scrollbar-track {
+  background: var(--color-background); /* Customize scrollbar track */
+}
+
+.packageFilter > ul > span {
+  display: flex;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: auto; /* Adjust to fit content */
+}
+
+.packageFilter > ul > li > img {
+  position: relative;
+  top: 4px;
+}
+
+.packageFilter > ul::-webkit-scrollbar {
+  display: none; /* Hide scrollbar (Webkit) */
+}
+
+.packageFilter > ul li {
+  list-style: none;
+  background-color: var(--color-background-light);
+  color: var(--color-secondary);
+  padding: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  line-height: 24px;
+  margin-right: 8px; /* Add spacing between items */
+}
+
+@media (max-width: 1000px) {
+  .packageFilter > ul li {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    margin-right: 10px; /* Reduce spacing on smaller screens */
+  }
+
+  .packageFilter > ul {
+    width: 100%; /* Ensure full width */
+  }
+}
+
+@media (max-width: 950px) {
+  .packageFilter {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

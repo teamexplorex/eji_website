@@ -1,0 +1,680 @@
+.festivals {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.ran_utsav > div:nth-child(1) > img {
+  width: 100%;
+}
+
+.ran_utsav {
+  display: flex;
+  width: 100%;
+}
+
+.ran_utsav > div:nth-child(1) {
+  flex: 0.4;
+  position: relative;
+  top: -20px;
+  z-index: -1
+}
+
+.ran_utsav > div:nth-child(2) {
+  flex: 0.6;
+}
+
+.ranUtsav_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ranUtsav_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+  margin-left: 1rem;
+}
+
+.ranUtsav_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+  margin-left: 1rem;
+}
+
+.ranUtsav_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+  margin-left: 1rem;
+}
+
+.ranUtsav_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.ranUtsav_details span {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.time {
+  color: var(--color-green);
+}
+
+.rio_karnival > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.camelImages > img {
+  width: 50%;
+}
+
+.rio_karnival {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.rio_karnival > div:nth-child(1) {
+  flex: 0.6;
+}
+
+.rio_karnival > div:nth-child(2) {
+  flex: 0.4;
+}
+
+.rioKarnival_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rioKarnival_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.rioKarnival_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.rioKarnival_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.rioKarnival_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.rioKarnival_details span {
+  font-weight: 600;
+}
+
+/* latomatina */
+
+.laTomatina > div:nth-child(1) > img {
+  width: 100%;
+}
+
+.laTomatina {
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: -16px;
+}
+
+.laTomatina > div:nth-child(1) {
+  flex: 0.45;
+}
+
+.laTomatina > div:nth-child(2) {
+  flex: 0.55;
+}
+
+.laTomatina_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.laTomatina_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+  margin-left: 1rem;
+}
+
+.laTomatina_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+  margin-left: 1rem;
+}
+
+.laTomatina_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+  margin-left: 1rem;
+}
+
+.laTomatina_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.laTomatina_details span {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.latomitaImages {
+  display: flex;
+  width: 100%;
+}
+
+.latomitaImages > img {
+  width: 100%;
+}
+
+.mardiaGrass > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.mardiaGrass {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.mardiaGrass > div:nth-child(1) {
+  flex: 0.45;
+}
+
+.mardiaGrass > div:nth-child(2) {
+  flex: 0.35;
+  margin-top: 4rem;
+}
+.mardiaGrass > div:nth-child(3) {
+  flex: 0.5;
+  margin-top: 4rem;
+}
+
+.mardiaGrass_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mardiaGrass_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.mardiaGrass_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.mardiaGrass_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.mardiaGrass_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.mardiaGrass_details span {
+  font-weight: 600;
+}
+
+.songKran > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.songKran {
+  display: flex;
+  width: 100%;
+}
+
+.songKran > div:nth-child(1) {
+  flex: 0.3;
+  margin-top: 3.5rem;
+  margin-right: 10px;
+}
+
+.songKran > div:nth-child(2) {
+  flex: 0.3;
+  margin-right: 2rem;
+}
+.songKran > div:nth-child(3) {
+  flex: 0.5;
+}
+
+.songKran_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.songKran_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.songKran_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.songKran_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.songKran_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.songKran_details span {
+  font-weight: 600;
+}
+
+/* vivid sydney */
+
+.vividSydney > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.vividSydney {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.vividSydney > div:nth-child(1) {
+  flex: 0.45;
+}
+
+.vividSydney > div:nth-child(2) {
+  flex: 0.35;
+}
+.vividSydney > div:nth-child(3) {
+  flex: 0.5;
+  margin-top: 5rem;
+}
+
+.vividSydney_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vividSydney_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.vividSydney_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.vividSydney_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.vividSydney_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.vividSydney_details span {
+  font-weight: 600;
+}
+
+.venicaCarnival > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.venicaCarnival {
+  display: flex;
+  width: 100%;
+}
+
+.venicaCarnival > div:nth-child(1) {
+  flex: 0.4;
+  margin-right: 10px;
+}
+
+.venicaCarnival > div:nth-child(2) {
+  flex: 0.3;
+  margin-right: 2rem;
+}
+.venicaCarnival > div:nth-child(3) {
+  flex: 0.5;
+  margin-top: 2rem;
+}
+
+.venicaCarnival_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.venicaCarnival_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.venicaCarnival_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.venicaCarnival_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.venicaCarnival_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.venicaCarnival_details span {
+  font-weight: 600;
+}
+
+.hornbill > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.hornbill {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.hornbill > div:nth-child(1) {
+  flex: 0.45;
+}
+
+.hornbill > div:nth-child(2) {
+  flex: 0.35;
+}
+.hornbill > div:nth-child(3) {
+  flex: 0.5;
+}
+
+.hornbill_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hornbill_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.hornbill_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.hornbill_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.hornbill_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.hornbill_details span {
+  font-weight: 600;
+}
+
+.okToberFest > div:nth-child(1) > img {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.okToberFest {
+  display: flex;
+  width: 100%;
+}
+
+.okToberFest > div:nth-child(1) {
+  flex: 0.4;
+  margin-right: 10px;
+}
+
+.okToberFest > div:nth-child(2) {
+  flex: 0.4;
+  margin-right: 2rem;
+}
+.okToberFest > div:nth-child(3) {
+  flex: 0.7;
+}
+
+.okToberFest_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.okToberFest_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.mobile{
+  display: none;
+}
+
+.okToberFest_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.okToberFest_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.okToberFest_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.okToberFest_details span {
+  font-weight: 600;
+}
+
+@media(max-width: 1235px){
+  .ranUtsav_details > div > h3, .rioKarnival_details > div > h3, .mardiaGrass_details > div> h3, .laTomatina > div> h3, .songKran_details > div > h3 {
+    font-size: 1rem;
+  }
+
+  .ranUtsav_details > div > h2 , .rioKarnival_details > div > h2, .mardiaGrass_details > div> h2,  .laTomatina > div> h2, .songKran_details > div > h2 {
+    font-size: 1.3rem;
+  }
+
+  .ranUtsav_details > div > p, .rioKarnival_details > div > p, .mardiaGrass_details > div> p,  .laTomatina > div> p, .songKran_details > div > p {
+    font-size: 0.8rem;
+  }
+
+  .ranUtsav_details > div > span, .rioKarnival_details > div > span, .mardiaGrass_details > div> span,  .laTomatina > div> span, .songKran_details > div > span  {
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .web{
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .ranUtsav_details{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile  img {
+    width: 100% !important;
+  }
+
+  .festivals{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .ranUtsav_details > div > h3 {
+    margin-left: 0rem;
+  }
+
+  .ranUtsav_details > div > h2 {
+    margin-left: 0rem;
+  }
+
+  .ranUtsav_details > div > hr {
+    margin-left: 0rem;
+  }
+
+  .ranUtsav_details > div > p {
+    margin-left: 0rem;
+  }
+  .ranUtsav_details > div > span {
+    margin-left: 0rem;
+  }
+}

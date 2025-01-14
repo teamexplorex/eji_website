@@ -1,0 +1,90 @@
+.ranUtsav_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.ranUtsav_details > div > h3 {
+  color: var(--color-green);
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  font-size: 1.3rem;
+  font-family: "Solitreo";
+}
+
+.ranUtsav_details > div > h2 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 2.3rem;
+}
+
+.ranUtsav_details > div > hr {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  border: none;
+  background-color: #ff8255;
+  height: 2px;
+}
+
+.ranUtsav_details > div > p {
+  font-size: 1 rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+}
+
+.ranUtsav_details span {
+  font-weight: 600;
+}
+
+.time {
+  color: var(--color-green);
+}
+
+.festivalDetails > img {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .web {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .ranUtsav_details {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .ranUtsav_details > div > h3{
+    font-size: 1rem;
+  }
+
+  .ranUtsav_details > div > h2 {
+    font-size: 1.3rem;
+  }
+
+  .ranUtsav_details > div > p {
+    font-size: 0.8rem;
+  }
+
+  .ranUtsav_details > div > span {
+    font-size: 0.8rem;
+  }
+}

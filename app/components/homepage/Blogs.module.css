@@ -1,0 +1,50 @@
+.blogs {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.blogContainer {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.tabBlogs {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .webBlogs {
+    display: none;
+  }
+
+  .tabBlogs {
+    display: block;
+  }
+
+  .tabBlogs > div {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .blogContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 673px) {
+  .webBlogs {
+    display: block;
+  }
+
+  .tabBlogs {
+    display: none;
+  }
+
+  .blogs{
+    flex-wrap: wrap;
+  }
+}

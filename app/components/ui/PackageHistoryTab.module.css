@@ -1,0 +1,237 @@
+.packageHistoryTab {
+  display: flex;
+  color: var(--color-text-secondory);
+  display: flex;
+  border-radius: 0.4rem;
+}
+
+.packageHistories{
+  box-shadow: 0px 2px 7px 0px #0000001c;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mobileBtns {
+  display: none !important;
+}
+
+.packageHistoryTab > div:nth-child(1) > img {
+  margin-right: 1rem;
+}
+
+.packageHistoryTab > div:nth-child(1) {
+  flex: 0.2;
+}
+
+.packageHistoryTab > div:nth-child(2) {
+  flex: 0.65;
+}
+
+.packageHistoryTab > div:nth-child(3) {
+  flex: 0.15;
+}
+
+.tripCompleted {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.tripCompleted > img {
+  position: relative;
+  top: 6px;
+  margin-right: 3px;
+}
+
+.title {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.titleWIthPRice {
+  color: var(--color-green);
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.packageDetails > span > span {
+  font-weight: 500 !important;
+  font-size: 1rem;
+}
+
+.tag {
+  background-color: var(--neutral-background);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 2rem;
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  position: relative;
+  bottom: 3px;
+  margin-top: 1rem;
+  border: 1px solid var(--color-text-primary);
+}
+
+.tag > img {
+    width: 1rem;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.location {
+  font-size: 1.1rem;
+  color: var(--color-green);
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.location > img {
+  position: relative;
+  top: 3px;
+  width: 1.2rem;
+  margin-right: 0.2rem;
+}
+
+.upcomingAdventure > span {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  
+}
+
+.upcomingAdventure > li {
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  list-style:circle;
+}
+
+.upcomingAdventure > li > span {
+  font-weight: 500;
+  color:var(--color-text-secondory);
+  margin-right: 1rem;
+}
+
+.viewItinerary {
+  color: var(--color-green) !important;
+  font-size: 1rem !important;
+  margin-right: 0.5rem;
+  font-weight: 500 !important;
+  text-decoration: underline;
+}
+
+.writeAReview {
+  color: #ffb800!important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-decoration: underline;
+}
+
+
+.btns {
+    display: flex;
+}
+.btns > button:nth-child(1) {
+    margin-top: 0.5rem;
+    width: 12.5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.6rem;
+}
+
+.btns > button:nth-child(2) {
+    background-color: var( --color-white);
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+    width: 12.5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.6rem;
+    border: 1px solid var(--color-primary);
+}
+
+@media(max-width: 1040px){
+.mobileBtns {
+  display: block !important;
+}
+
+.web {
+  display: none !important;
+}
+.mobileBtns{
+  display: flex !important;
+  flex-direction: row !important;
+}
+}
+
+@media(max-width: 839px){
+  .packageHistoryTab{
+    flex-direction: column!important;
+  }
+
+  .tripCompleted{
+    margin-top: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .mobileBtns{
+    width: 100%;
+  }
+  .mobileBtns > button {
+    flex: 0.5;
+  }
+
+  .btns > button:nth-child(1), .btns > button:nth-child(2){
+    width: 100%;
+  }
+
+  .upcomingAdventure > li{
+    margin-left: 0rem;
+
+  }
+
+  .upcomingAdventure{
+    margin-bottom: 1rem;
+  }
+  }
+
+  @media(max-width: 550px){
+    .packageHistoryTab > div:nth-child(1) > img {
+      width: 100%;
+    }
+
+    .title{
+      font-size: 1.2rem;
+    }
+
+    .titleWIthPRice{
+      font-size: 1rem;
+    }
+
+    .btns > button{
+      font-size: 0.9rem;
+      padding: 3px;
+    }
+
+    .upcomingAdventure > span {
+      font-size: 1rem;
+    }
+
+    .upcomingAdventure > li , .upcomingAdventure > li > span {
+      font-size: 0.9rem;
+    }
+  }

@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Offer Banner */
+.offerBanner {
+    background-color: #FFB800; /* Yellow color */
+    font-family: "Montserrat";
+    color: var(--color-black);
+    padding: 10px 70px;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.icon > img {
+    width: 2rem;
+}
+
+/* Price */
+.price {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+/* Title */
+.title {
+    font-size: 3rem;
+    font-family: "Rubik";
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    line-height: 1.5;
+}
+
+/* Book Button */
+.content  button {
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 10rem;
+    height: 2.7rem;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+@media (max-width: 950px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 726px) {
+    .offerBanner {
+        padding: 8px 60px;
+        border-radius:1.5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .icon, .hr {
+        display: none;
+    }
+
+    .icons{
+        justify-content: center;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .description{
+        font-size: 0.8rem;
+    }
+
+    .content  button {
+        height: 2.2rem;
+        width: 9rem;
+        font-size: 1rem;
+    }
+    
+  }

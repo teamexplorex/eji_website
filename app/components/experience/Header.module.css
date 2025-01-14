@@ -1,0 +1,90 @@
+.package_header {
+  position: relative;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 6rem;
+  overflow: hidden; /* Ensures the video doesn't spill outside */
+}
+
+.video_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: -1; /* Places the video behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensures content appears on top of the video */
+}
+
+.content > h1 {
+  font-size: 2.5rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+.content > p {
+  width: 28rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+@media (max-width: 900px) {
+  .package_header {
+    height: 50vh;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .package_header {
+    padding-left: 2rem;
+  }
+
+  .package_header > div > p {
+    width: 100%;
+    width: 25rem;
+  }
+
+  .package_header > div > h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .package_header {
+    height: 40vh;
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
+
+  .package_header > div > p {
+    width: 80%;
+  }
+
+  .package_header > div > h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 523px) {
+  .package_header {
+    height: 35vh;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .package_header > div > p {
+    font-size: 0.8rem;
+  }
+
+  .package_header > div > h1 {
+    font-size: 1rem;
+  }
+}

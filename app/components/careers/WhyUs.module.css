@@ -1,0 +1,167 @@
+.container {
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.content section {
+  width: 30%;
+  /* height: 450px; */
+  box-shadow: 0px 2px 7px 0px #0000001c;
+  padding-bottom: 2rem;
+  border-radius: 0.75rem;
+}
+
+.content section img {
+  width: 100%;
+  height: 235px;
+}
+
+.content section h2 {
+  color: #2d2d2d;
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 21.07px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.content section h3 {
+  color: #969ca6;
+  font-family: Poppins;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.content section p {
+  color: #000000;
+  font-family: Inter;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 20.28px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 1000px) {
+   .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: unset;
+      align-items: center;
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+    }
+    
+    .content>section {
+      width: 100%;
+      display: grid; /* Use CSS Grid */
+      grid-template-columns: 40% 60%; /* Two columns: 40% for the image, 60% for the text */
+      grid-template-rows: auto auto auto auto auto; /* Three rows for the content */
+      padding-bottom: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .content section img {
+      grid-column: 1 / 2; /* Place the image in the first column */
+  grid-row: 1 / 6; /* Span the image across all three rows */
+  width: 100%; /* Fill the column's width */
+  height: 100%; /* Fill the column's height */
+  object-fit: cover; /* Maintain aspect ratio while covering the space */
+    }
+
+    .content section h2 {
+      grid-column: 2 / 3; /* Place the h2 in the second column */
+      grid-row: 1 / 2; /* Place it in the first row of the second column */
+    }
+    
+    .content section h3 {
+      grid-column: 2 / 3; /* Place the h3 in the second column */
+      grid-row: 2 / 3; /* Place it in the second row of the second column */
+      padding-top: 0!important;
+      padding-bottom: 0!important;
+    }
+    
+    .content section p {
+      grid-column: 2 / 3; /* Place the p in the second column */
+      grid-row: 3 / 6; /* Place it in the third row of the second column */
+    }
+
+    .content section h2,
+    .content section h3,
+    .content section p{
+      margin: 0; /* Remove default margins for clean spacing */
+  padding: 20px; /* Optional padding for spacing */
+  box-sizing: border-box; /* Include padding in the element's size */
+    }
+
+    
+ }
+
+ @media (max-width:800px) {
+  .content{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+ }
+ 
+
+@media (max-width: 700px) {
+  /* .container  button {
+        height: 2.2rem;
+        width: 9rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    } */
+
+  .layout > p {
+    text-align: center !important;
+  }
+
+  .layout > h3 {
+    text-align: center !important;
+  }
+
+  .layout > h2 {
+    text-align: center !important;
+  }
+}
+
+@media (max-width:600px) {
+  .content{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .content section{
+    display: flex;
+    flex-direction: column;
+
+  }
+ }

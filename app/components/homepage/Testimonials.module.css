@@ -1,0 +1,126 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  height: 550px;
+  flex: 0.4;
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-radius: 15px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 3;
+}
+.div2 {
+  grid-area: 4 / 1 / 6 / 3;
+}
+.div3 {
+  grid-area: 1 / 3 / 3 / 5;
+}
+.div4 {
+  grid-area: 3 / 3 / 6 / 5;
+}
+
+.testimonial_container {
+  display: flex;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.testimonial_container > div:nth-child(1) {
+  flex: 0.6;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial > h3 {
+  font-family: "Solitreo";
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.testimonial > p {
+  width: 10rem;
+  width: 37.8rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profileContainer {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the container circular */
+  padding: 0px; /* Space between the image and the border */
+  background-color: #ffa500; /* Border color, adjust to desired color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars > img {
+  width: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1179px) {
+  .parent {
+    display: none;
+  }
+  .testimonial_container > div:nth-child(1) {
+    flex: 1;
+  }
+}
+
+@media (max-width: 950px) {
+  .testimonial_container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .profileContainer{
+    width: 70px;
+    height: 70px;
+  }
+  
+
+  .profileImage {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .testimonial > h3{
+    margin-top: 2rem;
+  }
+
+  .testimonial > p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,26 @@
+.package2_container {
+  display: flex;
+}
+
+.package2 {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.package2_container > div:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.package2 > h2 {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.package2 > span {
+  font-size: 1rem;
+  color: var(--color-text-secondory);
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1rem;
+}

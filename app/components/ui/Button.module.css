@@ -1,0 +1,15 @@
+.btn{
+    background: linear-gradient(90deg, var(--color-primary), #FF7848);
+    outline : none !important;
+    color: var(--color-white);
+    border: none;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 7px 0px #0000001c;
+}
+
+.btn img {
+    margin-left: 0.4rem;
+}

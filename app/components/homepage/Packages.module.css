@@ -1,0 +1,42 @@
+.packages {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.tab {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .web_packages {
+    display: none;
+  }
+
+  .packages {
+    justify-content: center;
+  }
+
+  .tab {
+    display: block;
+  }
+}
+
+@media (max-width: 950px) {
+  .packages {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 673px) {
+  .tab {
+    display: none;
+  }
+
+  .web_packages {
+    display: block;
+    flex-wrap: wrap;
+  }
+}

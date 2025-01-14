@@ -1,0 +1,272 @@
+.container > .topbar,
+.container > .bottombar {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.container {
+  box-shadow: 0px 2px 7px 0px #0000001c;
+}
+
+.mobileLogo {
+  display: none;
+}
+
+.topbar,
+.bottombar,
+.bottombar > div > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.dropdown {
+  position: relative;
+  top: 3px;
+  width: 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.more {
+  position: relative;
+  top: -3px;
+}
+
+.bottombar > div > ul {
+  list-style-type: none;
+  width: 38rem;
+  color: var(--color-text-primary);
+}
+
+.bottombar > div > ul > li {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.topbar {
+  background-color: var(--color-background);
+  color: var(--color-white);
+
+  font-size: 0.8rem;
+}
+
+.emailIcon {
+  position: relative;
+  top: 4px;
+}
+
+.bookYourTour {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 7.3rem;
+}
+
+.socialIcon {
+  width: 1rem;
+}
+
+.socialIcons span {
+  background-color: var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.logo {
+  width: 16rem;
+  margin-top: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact > div:nth-child(1) {
+  display: flex;
+}
+
+.contact > div:nth-child(1) > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > div:nth-child(1) > span > img {
+  width: 1.7rem;
+}
+
+.phone {
+  margin-right: 1rem;
+}
+
+.contact > div:nth-child(1) > span > hr {
+  width: 2rem; /* This sets the thickness of the line */
+  transform: rotate(90deg); /* Rotates the hr by 90 degrees */
+}
+
+.contact > div > span {
+  display: block;
+}
+
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 10;
+}
+
+.dropdownContainer > div:nth-child(1),
+.packages > div,
+.flights > div,
+.hotels > div {
+  padding-bottom: 5px;
+}
+
+.popup p {
+  margin: 0;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-secondory);
+  border-bottom: 1px solid var(--color-text-secondory);
+}
+
+.lastElement {
+  border-bottom: 2px solid var(--color-primary) !important;
+  border-radius: 4px;
+}
+
+.popup p:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdownContainer:hover .popup {
+  display: block;
+}
+
+@media (max-width: 1349px) {
+  .flights,
+  .hotels {
+    display: none;
+  }
+
+  .bottombar > div > ul {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .packages {
+    display: none;
+  }
+
+  .bottombar > div > ul {
+    width: 22rem;
+  }
+}
+
+@media (max-width: 1073px) {
+  .bottombar > div > ul {
+    display: none;
+  }
+
+  .mobileLogo {
+    display: block;
+    width: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 0.5rem;
+    position: relative;
+    font-size: 1.2rem;
+    top: 10px;
+  }
+
+  .bottombar > div:nth-child(1) {
+    display: flex;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .contact > div:nth-child(1) > span > img {
+    width: 1.5rem;
+  }
+
+  .bottombar > div > ul {
+    width: 22rem;
+  }
+
+  .number {
+    font-size: 0.9rem;
+  }
+
+  .contact > div:nth-child(1) > span > hr {
+    width: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .socialIcons,
+  .topbar > div:nth-child(1) {
+    display: none;
+  }
+
+  .topbar {
+    justify-content: center;
+  }
+
+  .container > .topbar,
+  .container > .bottombar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .number {
+    font-size: 0.9rem;
+  }
+
+  .more_enquiry_text{
+    font-size: 0.9rem;
+  }
+
+}

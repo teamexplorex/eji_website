@@ -1,0 +1,109 @@
+.container {
+  background: url("../../../public/banner.svg");
+  height: 85vh;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  background-position-y: -4rem;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.mobileVersion{
+    display: none;
+}
+
+.left > h1 {
+  width: 43rem;
+  font-family: "Montserrat";
+  color: var(--color-white);
+  font-size: 4rem;
+}
+
+.left > p {
+  width: 30rem;
+  color: var(--color-white);
+  margin-top: 1rem;
+}
+
+.left > button {
+  margin-top: 2rem;
+  width: 12.5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 1301px) {
+  .left > h1 {
+    width: 90%;
+  }
+
+  .left > p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1150px) {
+    .left > h1 {
+        font-size: 3.5rem;
+    }
+
+    .left > p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .left > h1 {
+        font-size: 3rem;
+    }
+
+    .left > p{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 950px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media(max-width: 789px){
+    .left {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .container {
+        background: none;
+        height: 100%;
+        display: block;
+    }
+
+    .mobileVersion{
+        display: block;
+    }
+
+    .mobileVersion > h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: var( --color-secondary);
+    }
+    
+}
+
+@media (max-width: 500px) {
+  .mobileVersion > h1 {
+    font-size: 1.5rem;
+  }
+}

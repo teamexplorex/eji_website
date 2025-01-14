@@ -1,0 +1,180 @@
+.div1 > p {
+  color: var(--color-text-secondory);
+  padding-top: 1.5rem;
+}
+
+.div1 > h2 {
+  font-family: "Solitreo";
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.div1 > h3 {
+  font-family: "Rubik";
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.highlighted {
+  color: var(--color-primary);
+}
+
+.wonders {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 3rem;
+}
+
+.firstHalf > div,
+.secondHalf > div {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.div1 {
+  width: 100% !important;
+}
+
+.firstHalf,
+.secondHalf {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  height: 20rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.firstHalf > div:nth-child(1) {
+  flex: 0.5;
+}
+
+.firstHalf > div:nth-child(2) {
+  flex: 0.25;
+}
+
+.firstHalf > div:nth-child(3) {
+  flex: 0.25;
+}
+
+.secondHalf > div {
+  flex: 0.25;
+}
+
+@media (max-width: 1244px) {
+  .firstHalf,
+  .secondHalf {
+    height: 18rem;
+  }
+
+  .div1 > h2 {
+    font-size: 1.2rem;
+  }
+
+  .div1 > h3 {
+    font-size: 1.7rem;
+  }
+
+  .div1 > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .div1 > p {
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+  }
+
+  .div1 > h3 {
+    font-size: 1.5rem;
+  }
+
+  .firstHalf,
+  .secondHalf {
+    height: 18rem;
+  }
+
+  .label > div > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .wonders {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 874px) {
+  .mobile {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
+
+  .div1 {
+    display: none;
+  }
+
+  .firstHalf > div:nth-child(2) {
+    flex: 1;
+  }
+
+  .firstHalf > div:nth-child(3) {
+    flex: 1;
+  }
+
+  .firstHalf > div {
+    flex: 1;
+  }
+
+  .secondHalf > div {
+    flex: 1
+  }
+}
+
+@media(max-width: 700px){
+  
+  .firstHalf,
+  .secondHalf {
+    height: 13rem;
+  }
+
+  .label > div > p {
+    font-size: 0.9rem;
+  }
+}
+
+@media(max-width: 595px){
+  
+  .firstHalf,
+  .secondHalf {
+    height: 13rem;
+  }
+}
+
+@media(max-width: 509px){
+  
+  .firstHalf,
+  .secondHalf {
+    height: 9rem;
+  }
+}
+
+@media(max-width: 456px){
+  
+  .firstHalf,
+  .secondHalf {
+    height: 8rem;
+  }
+}

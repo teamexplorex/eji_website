@@ -1,0 +1,75 @@
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.container section {
+  /* background-color: red; */
+  width: 48.5%;
+  margin-right: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-left: 10rem;
+  /* padding-right: 5rem; */
+}
+
+.container span {
+  background-color: #fff5f2;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0.75rem;
+}
+
+.container span img {
+}
+
+.container span h6 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18.9px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.container span p {
+  font-family: Inter;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 18.9px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.layout {
+  width: 48.5%;
+}
+
+.layout > p {
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.layout > h3 {
+  text-align: left !important;
+}
+
+.layout > h2 {
+  text-align: left !important;
+}
+
+@media (max-width: 700px) {
+}

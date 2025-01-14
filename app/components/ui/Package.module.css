@@ -1,0 +1,145 @@
+.package {
+  width: 90%; /* Adjusted for responsiveness */
+  height: auto;
+  box-shadow: 0px 6px 16px 0px var(--layout-shadow);
+  border-radius: 0.7rem;
+  margin: auto; /* Center the package */
+  margin-bottom: 1rem;
+}
+
+.packageImage {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-top-left-radius: 0.7rem;
+}
+
+.priceDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceDetails > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.packageContent {
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.packageContent > h3 {
+  color: var(--color-secondary);
+  font-weight: 500;
+  font-family: "Rubik";
+  font-size: 1.4rem;
+}
+
+.packageContent > p {
+  overflow-x: hidden;
+  color: var(--color-text-secondory);
+  font-size: 0.8rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.8rem;
+}
+
+.packageContent > hr {
+  border: none;
+  outline: none;
+  background-color: var(--color-text-secondory);
+  height: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.priceDetails > div > button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.priceDetails > div > button > img {
+  width: 1.3rem;
+}
+
+.priceDetails > div > span {
+  color: var(--color-text-secondory);
+  font-size: 0.8rem;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--color-primary) !important;
+  font-size: 1.4rem !important;
+}
+.topLeftStrip {
+  position: absolute;
+  top: 1rem;
+  background-color: var(--color-black); /* Black background */
+  color: var(--color-white); /* White text */
+  font-size: 0.8rem;
+}
+
+.topLeftStrip2 {
+  position: absolute;
+  top: 1rem;
+  background-color: var(--color-black); /* Black background */
+  color: var(--color-white); /* White text */
+  font-size: 0.8rem;
+}
+
+.topLeftStrip > div {
+  font-size: 0.8rem;
+  padding: 8px;
+  padding-left: 10px;
+}
+
+.topLeftStrip2 > div {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  padding: 5px;
+  padding-left: 10px;
+  padding-top: 0px !important;
+  font-size: 0.8rem;
+  border: 1px solid var(--color-primary);
+}
+
+.topLeftStrip2 > div img {
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+@media (max-width: 1287px) {
+  .packageContent > h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .package {
+    width: 100%;
+  }
+}
+
+@media (max-width: 673px) {
+  .priceDetails > div > button {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .packageContent > h3 {
+    font-size: 1.1rem;
+  }
+
+  .packageContent > p{
+    font-size: 0.8rem;
+  }
+}

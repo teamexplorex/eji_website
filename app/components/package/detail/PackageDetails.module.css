@@ -1,0 +1,176 @@
+.packageDetails_container > h1 {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.packageDetails_container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.packageDetails_container > div {
+  display: flex;
+}
+
+.priceCard,
+.needOurHelp,
+.couponsCard {
+  box-shadow: 0px 2px 7px 0px #0000001c;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+.needOurHelp > h1,
+.couponsCard > h1 {
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.needOurHelp > form > button,
+.priceCard > button {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.needOurHelp > form > button > img {
+  width: 1.4rem;
+}
+
+.needOurHelp > form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.needOurHelp > form > div > label {
+  color: var(--color-secondary);
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.needOurHelp > form > div > input::placeholder {
+  color: var(--color-text-secondory);
+  font-weight: 500;
+}
+.needOurHelp > form > div > input {
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--color-text-secondory);
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+}
+
+.needOurHelp > form > div > label > span,
+.prevPrice > span:nth-child(2) {
+  color: #f73f3f;
+  font-size: 0.9rem;
+}
+
+.prevPrice > span:nth-child(1) {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondory);
+  text-decoration: line-through;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.price > span {
+  color: var(--color-text-secondory);
+  font-size: 1rem;
+  font-weight: 500 !important;
+}
+
+.excludingText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondory);
+}
+
+.haveACouponCode {
+  display: flex;
+  justify-content: space-between;
+}
+
+.haveACouponCode > span:nth-child(1) {
+  color: var(--color-text-secondory);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.haveACouponCode > span:nth-child(2) {
+  text-decoration: underline;
+  color: #ff8255;
+  font-size: 0.8rem;
+}
+
+.coupon {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px dashed var(--color-green);
+  border-radius: 0.5rem;
+  background: linear-gradient(275.25deg, #c0f5da -43.37%, #ffffff 97.72%);
+}
+
+.coupon > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon > div > h1 > img {
+  position: relative;
+  top: 5px;
+  margin-right: 0.5rem;
+}
+
+.coupon > div > h1 {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.coupon > div:nth-child(1) > span {
+  font-weight: 500;
+  color: #FF8255;
+}
+
+.removeCoupon > span:nth-child(1){
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: var(--color-text-secondory);
+}
+
+.removeCoupon > span:nth-child(2) {
+  color: var( --color-green);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+@media(max-width: 1205px){
+  .couponsCard, .priceDetails{
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .packageDetails_container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

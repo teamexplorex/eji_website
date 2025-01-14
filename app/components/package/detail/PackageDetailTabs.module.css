@@ -1,0 +1,80 @@
+.packageDetailTabs {
+  background-color: var(--neutral-background);
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  margin-right: 5rem;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.packageDetailTabs::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.packageDetailTabs > span {
+  flex: 0 0 auto; /* Prevent shrinking and set width automatically */
+  display: inline-block;
+  margin-right: 2rem;
+  padding: 0.8rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.packageDetailTabs > span > img {
+  width: 1.3rem;
+  position: relative;
+  top: 0.3rem;
+  margin-right: 0.6rem;
+}
+
+.active {
+  color: var(--color-secondary) !important;
+  border-bottom: 2px solid var(--color-secondary) !important;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+  .packageDetailTabs > span {
+    font-size: 0.9rem;
+  }
+
+  .packageDetailTabs > span > img {
+    width: 1.2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .packageDetailTabs > span {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .packageDetailTabs > span {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .packageDetailTabs > span > img {
+    width: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .packageDetailTabs {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
