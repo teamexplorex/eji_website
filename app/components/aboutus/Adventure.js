@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from "./Adventure.module.css";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import Button from "../ui/Button";
 
 const Adventure = () => {

@@ -74,6 +74,7 @@
 
   .packageFilter > ul {
     width: 100%; /* Ensure full width */
+    margin-top: 1.5rem;
   }
 }
 

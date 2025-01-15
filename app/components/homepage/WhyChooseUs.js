@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./WhyChooseUs.module.css";
 
 const WhyChooseUs = () => {

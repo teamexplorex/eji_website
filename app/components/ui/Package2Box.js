@@ -1,8 +1,12 @@
+"use client"
 import { HiOutlineArrowRight } from "react-icons/hi";
 import classes from "./Package2Box.module.css";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 const Package2Box = () => {
+  const router = useRouter();
+
   return (
     <div className={classes.package}>
       <div className={classes.package_imageDetails}>
@@ -97,9 +101,16 @@ const Package2Box = () => {
             ₹ 63,817 <span>/per person</span>
           </p>
           <p className={classes.excludingText}>Exluding applicable taxes</p>
-          <Button text="Proceed to Payment" />
+          <Button
+            text="Book A Trip"
+            src="/icons/airplane.svg"
+            onClick={() => router.push("/packages/asdfads")}
+          ></Button>
         </div>
-        <span><img src="/icons/messages.svg"/>Talk to a travel Expert</span>
+        <span>
+          <img src="/icons/messages.svg" />
+          Talk to a travel Expert
+        </span>
       </div>
     </div>
   );

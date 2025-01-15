@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./Wonders.module.css";
+import { useRouter } from "next/navigation";
 
 const Label = ({ title }) => (
   <div style={{ width: "100%", height: "100%" }} className={classes.label}>
@@ -34,6 +35,7 @@ const Label = ({ title }) => (
 
 const Wonders = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // Only run on the client
@@ -80,21 +82,24 @@ const Wonders = () => {
             </div>
             <div
               className={classes.div3}
-              style={{ background: `url('/wonders/1.svg')` }}
+              style={{ background: `url('/wonders/1.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
               <Label title="Uae" />
             </div>
             <div
               className={classes.div4}
-              style={{ background: `url('/wonders/2.svg')` }}
+              style={{ background: `url('/wonders/2.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
               <Label title="Africa" />
             </div>
             <div
               className={`${classes.div6} ${classes.mobile}`}
-              style={{ background: `url('/wonders/4.svg')` }}
+              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
               <Label title="America" />
@@ -103,26 +108,30 @@ const Wonders = () => {
           <div className={classes.secondHalf}>
             <div
               className={`${classes.div6} ${classes.web}`}
-              style={{ background: `url('/wonders/4.svg')` }}
+              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
               <Label title="America" />
             </div>
             <div
               className={classes.div7}
-              style={{ background: `url('/wonders/3.svg')` }}
+              style={{ background: `url('/wonders/3.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               <Label title="Oceania" />
             </div>
             <div
               className={classes.div8}
-              style={{ background: `url('/wonders/5.svg')` }}
+              style={{ background: `url('/wonders/5.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               <Label title="Europe" />
             </div>
             <div
               className={classes.div9}
-              style={{ background: `url('/wonders/6.svg')` }}
+              style={{ background: `url('/wonders/6.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
             >
               <Label title="Asia" />
             </div>

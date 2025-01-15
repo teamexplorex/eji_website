@@ -1,15 +1,15 @@
+"use client"
 import Button from "./Button";
 import classes from "./Package.module.css";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import { useRouter } from "next/navigation"
 
 const Package = () => {
+  const router = useRouter();
+
   return (
     <div className={classes.package}>
       <div style={{ position: "relative" }}>
-        {/* Add the top-left strip */}
-        {/* <div className={classes.topLeftStrip}>
-          <div>3 DAYS / 4 NIGHTS</div>
-        </div> */}
         <div className={classes.topLeftStrip2}>
           <div>
             <img src="/icons/packageLocation.svg" alt="Location Icon" />
@@ -37,7 +37,7 @@ const Package = () => {
               <span>Taxes Incl/Pers</span>
             </div>
             <div>
-              <Button text="Book A Trip" src="/icons/airplane.svg"></Button>
+              <Button text="Book A Trip" src="/icons/airplane.svg" onClick={()=>router.push('/packages/asdfads')}></Button>
             </div>
           </div>
         </div>

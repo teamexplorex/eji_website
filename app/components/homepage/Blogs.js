@@ -1,5 +1,5 @@
 import BlogCard from "../ui/BlogCard";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./Blogs.module.css";
 
 const Blogs = ({isTitleShown=true}) => {

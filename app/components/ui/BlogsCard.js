@@ -1,8 +1,12 @@
+"use client";
 import classes from "./BlogsCard.module.css";
+import { useRouter } from "next/navigation";
 
 const BlogsCard = () => {
+  const router = useRouter();
+
   return (
-    <div className={classes.blogs_card}>
+    <div className={classes.blogs_card} style={{ cursor: "pointer" }} onClick={()=>router.push("/blogs/dsafasd")}>
       <img src="/blogs_card.svg" />
       <h3>Discover Hidden Gems Around the World</h3>
       <p>

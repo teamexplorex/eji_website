@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from "../ui/Button";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 
 import classes from './WhyUs.module.css'
 

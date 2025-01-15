@@ -1,4 +1,4 @@
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import Package from "../ui/Package";
 import PackageFilter from "./PackageFilter";
 import classes from "./Packages.module.css";

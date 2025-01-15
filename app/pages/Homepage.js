@@ -6,7 +6,6 @@ import PromotionalPackageContent from "../components/homepage/PromotionalPackage
 import Testimonials from "../components/homepage/Testimonials";
 import Blogs from "../components/homepage/Blogs";
 import WhyChooseUs from "../components/homepage/WhyChooseUs";
-import StickyButtons from "../components/homepage/StickyButtons";
 
 const HomePage = () => {
   return (
@@ -37,7 +36,6 @@ const HomePage = () => {
         style={{ backgroundImage: `url('/home_banner.svg')` }}
       > <PromotionalPackageContent /></div>
       <Blogs />
-      <StickyButtons/>
     </>
   );
 };

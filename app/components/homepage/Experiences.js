@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./Experiences.module.css";
+import { useRouter } from "next/navigation";
 
 const Label = ({ title }) => (
   <div style={{ width: "100%", height: "100%" }} className={classes.label}>
@@ -33,6 +34,7 @@ const Label = ({ title }) => (
 
 const Experiences = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     // Only run on the client
@@ -59,32 +61,40 @@ const Experiences = () => {
       <div>
         <div className={classes.experiences}>
           <div
+            onClick={() => router.push("/experiences/asdfasdfa")}
             style={{
               background: `url("/experiences/1.svg")`,
+              cursor: "pointer",
             }}
             className={classes.first_experience}
           >
             <Label title="Beaches" />
           </div>
           <div
+            onClick={() => router.push("/experiences/asdfasdfa")}
             style={{
               background: `url("/experiences/2.svg")`,
+              cursor: "pointer",
             }}
             className={classes.second_experience}
           >
             <Label title="Adventure" />
           </div>
           <div
+            onClick={() => router.push("/experiences/asdfasdfa")}
             style={{
               background: `url("/experiences/3.svg")`,
+              cursor: "pointer",
             }}
             className={classes.first_experience}
           >
             <Label title="Mountains" />
           </div>
           <div
+            onClick={() => router.push("/experiences/asdfasdfa")}
             style={{
               background: `url("/experiences/4.svg")`,
+              cursor: "pointer",
             }}
             className={classes.second_experience}
           >
@@ -92,19 +102,32 @@ const Experiences = () => {
           </div>
         </div>
         <div className={classes.mobile_version}>
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push("/experiences/asdfasdfa")}
+          >
             <img src="/experiences/beaches_mobile.svg" />
             <p>Adventures</p>
           </div>
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push("/experiences/asdfasdfa")}
+          >
             <img src="/experiences/adventures_mobile.svg" />
             <p>Mountains</p>
           </div>
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push("/experiences/asdfasdfa")}
+          >
             <img src="/experiences/mountains_mobile.svg" />
             <p>Wildlife</p>
           </div>
-          <div className={classes.experiences_last}>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push("/experiences/asdfasdfa")}
+            className={classes.experiences_last}
+          >
             <img src="/experiences/wildlife_mobile.svg" />
             <p>Beaches</p>
           </div>

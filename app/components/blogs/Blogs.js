@@ -1,9 +1,11 @@
 import BlogsCard from "../ui/BlogsCard";
 import classes from "./Blogs.module.css";
 
+
 const Blogs = () => {
+
   return (
-    <div className={classes.blogs}>
+    <div className={classes.blogs} >
       <div>
         <h2>Our Recent Blog posts</h2>
         <p>

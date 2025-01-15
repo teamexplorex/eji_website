@@ -5,6 +5,7 @@
   margin-bottom: 2rem;
   padding: 1rem;
   color: var(--color-text-secondory);
+  margin-right: 1rem;
 }
 
 .packagePolicy_container > span {

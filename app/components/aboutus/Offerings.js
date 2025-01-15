@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Offerings.module.css";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import Button from "../ui/Button";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";

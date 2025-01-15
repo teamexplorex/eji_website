@@ -1,4 +1,4 @@
-import BlogDetail from "@/app/pages/BlogDetail";
+import BlogDetail from "../../pages/BlogDetail";
 
 const BlogDetailPage = () => {
   return <BlogDetail />

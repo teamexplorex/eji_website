@@ -1,7 +1,7 @@
 import React from "react";
 // import React, { useState } from "react";
 import Button from "../ui/Button";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';

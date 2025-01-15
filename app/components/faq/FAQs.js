@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Button from "../ui/Button";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 // import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";

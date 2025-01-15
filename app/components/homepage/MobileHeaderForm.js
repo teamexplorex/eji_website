@@ -1,9 +1,16 @@
 import Button from "../ui/Button";
 import classes from "./MobileHeaderForm.module.css";
+import { useRouter } from "next/navigation";
 
 const MobileHeaderForm = () => {
+  const router = useRouter();
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    router.push("/packages");
+  };
   return (
-    <div className={classes.mobileHeaderContainer}>
+    <form className={classes.mobileHeaderContainer} onClick={formSubmitHandler}>
       <div className={classes.input}>
         <span className={classes.icon}>
           <img src="/icons/location_black.svg" />
@@ -47,7 +54,7 @@ const MobileHeaderForm = () => {
         </div>
       </div>
       <Button text={"Search"} src="/icons/search.svg" />
-    </div>
+    </form>
   );
 };
 

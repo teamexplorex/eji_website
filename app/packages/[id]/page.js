@@ -1,4 +1,4 @@
-import PackageDetail from "@/app/pages/PackageDetail";
+import PackageDetail from "../../pages/PackageDetail";
 
 const PackageDetailPage = () => {
   return <PackageDetail />;

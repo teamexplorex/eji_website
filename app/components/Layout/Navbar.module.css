@@ -14,6 +14,12 @@
   display: none;
 }
 
+.flights_more,
+.package_more,
+.hotels_more {
+  display: none;
+}
+
 .topbar,
 .bottombar,
 .bottombar > div > ul {
@@ -130,6 +136,11 @@
   display: block;
 }
 
+.container a {
+  text-decoration: none; /* Remove underline */
+  color: inherit;        /* Inherit the text color from the parent */  
+}
+
 .dropdownContainer {
   position: relative;
   display: flex;
@@ -184,6 +195,11 @@
     display: none;
   }
 
+  .flights_more,
+  .hotels_more {
+    display: block;
+  }
+
   .bottombar > div > ul {
     width: 30rem;
   }
@@ -194,10 +210,15 @@
     display: none;
   }
 
+  .package_more {
+    display: block;
+  }
+
   .bottombar > div > ul {
     width: 22rem;
   }
 }
+
 
 @media (max-width: 1073px) {
   .bottombar > div > ul {
@@ -265,8 +286,7 @@
     font-size: 0.9rem;
   }
 
-  .more_enquiry_text{
+  .more_enquiry_text {
     font-size: 0.9rem;
   }
-
 }

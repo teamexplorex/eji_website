@@ -1,10 +1,17 @@
 "use client";
 import Button from "../ui/Button";
 import classes from "./HeaderForm.module.css";
+import { useRouter } from "next/navigation";
 
 const HeaderForm = () => {
+  const router = useRouter();
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    router.push("/packages");
+  };
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onClick={formSubmitHandler}>
       <h1>Search Your Destinations</h1>
       <div className={classes.formInputs}>
         <label>From : </label>
@@ -39,10 +46,7 @@ const HeaderForm = () => {
           <input type="number" placeholder="No Of Persons" />
         </div>
       </div>
-      <Button
-        text={"Search"}
-        src="/icons/search.svg"
-      />
+      <Button text={"Search"} src="/icons/search.svg" />
     </form>
   );
 };

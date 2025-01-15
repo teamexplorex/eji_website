@@ -1,0 +1,13 @@
+/* Make the navbar wrapper sticky */
+.navbarWrapper {
+    position: sticky;
+    top: 0;
+    z-index: 98; /* Ensure it stays above other elements */
+    background-color: white; /* Optional: Prevent transparency */
+  }
+  
+  /* Wrapper for content and footer */
+  .contentWrapper {
+    padding-top: 0rem; /* Optional: Adjust padding as needed */
+  }
+  

@@ -1,4 +1,4 @@
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./Testimonials.module.css";
 
 const Testimonials = () => {

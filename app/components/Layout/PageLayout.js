@@ -1,4 +1,4 @@
-import classes from "./Layout.module.css";
+import classes from "./PageLayout.module.css";
 
 const Layout = ({ children, title, src, heading, style, subheading, additionalClasses }) => {
   return (

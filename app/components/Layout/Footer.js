@@ -1,6 +1,9 @@
 import classes from "./Footer.module.css";
+import { useRouter } from "next/navigation"
 
 const Footer = () => {
+  const router = useRouter();
+
   return (
     <div className={classes.footer}>
       <div className={classes.footer_content}>
@@ -27,19 +30,19 @@ const Footer = () => {
         </div>
         <ul>
           <li>Quick Links</li>
-          <li>About Us</li>
-          <li>FAQ's</li>
-          <li>Career</li>
-          <li>Privacy Policy</li>
-          <li>Terms and Conditions</li>
+          <li onClick={()=>router.push("/about")}>About Us</li>
+          <li onClick={()=>router.push("/faq")}>FAQ's</li>
+          <li onClick={()=>router.push("/careers")}>Career</li>
+          <li onClick={()=>router.push("/privacy-policy")}>Privacy Policy</li>
+          <li onClick={()=>router.push("/terms-and-conditions")}>Terms and Conditions</li>
         </ul>
         <ul>
           <li>Services</li>
-          <li>Experiences</li>
-          <li>Packages</li>
-          <li>Flights</li>
-          <li>Hotels</li>
-          <li>Visa</li>
+          <li onClick={()=>router.push("/blogs")}>Blogs</li>
+          <li onClick={()=>router.push("/packages")}>Packages</li>
+          <li onClick={()=>router.push("https://planngo.travel/")}>Flights</li>
+          <li onClick={()=>router.push("https://planngo.travel/")}>Hotels</li>
+          <li onClick={()=>router.push("https://planngo.travel/")}>Visa</li>
         </ul>
         <ul className={classes.map}>
           <li>Contact Us</li>

@@ -1,8 +1,16 @@
+"use client"
 import classes from "./BlogCard.module.css";
+import { useRouter } from "next/navigation";
 
 const Package = () => {
+  const router = useRouter();
+
   return (
-    <div className={classes.blog}>
+    <div
+      className={classes.blog}
+      style={{ cursor: "pointer" }}
+      onClick={()=>router.push("/blogs/asdfasdf")}
+    >
       <div style={{ position: "relative" }}>
         <div>
           <img src="/blogs/1.svg" alt="Package" />

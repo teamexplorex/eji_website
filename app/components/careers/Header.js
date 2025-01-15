@@ -1,5 +1,5 @@
 import Button from "../ui/Button";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import classes from "./Header.module.css";
 
 const Header = () => {

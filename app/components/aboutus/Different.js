@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from "./Different.module.css";
-import Layout from "../ui/Layout";
+import Layout from "../Layout/PageLayout";
 import Button from "../ui/Button";
 
 const Different = () => {
