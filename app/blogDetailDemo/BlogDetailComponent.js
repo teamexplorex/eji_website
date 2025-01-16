@@ -10,12 +10,16 @@ const BlogDetailComponent = () => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(
-        process.env.NEXT_PUBLIC_APP_URL + "/blog/" + params["id"]
-      );
-      setBlogData(data.message);
+      try {
+        const { data } = await axios.get(
+          `${process.env.NEXT_PUBLIC_APP_URL}/blog/${params["id"]}`
+        );
+        setBlogData(data.message);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      }
     })();
-  }, []);
+  }, [params]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -37,21 +41,25 @@ const BlogDetailComponent = () => {
       <div className={classes.blogDetail}>
         <div className={classes.blogs_card}>
           <div>
-            <p
-              style={{
+            <p className={classes.publishedText}   style={{
                 color: "var(--color-green)",
                 fontSize: "1rem",
-              }}
-              className={classes.publishedText}
-            >
+              }}>
               Published by EJI Travels //{" "}
               {blogData.createdAt ? formatDate(blogData.createdAt) : "Unknown"}
             </p>
             <h1>{blogData.title}</h1>
             <p className={classes.description}>{blogData.description}</p>
-            <img src={blogData.bannerImage} />
+            <img
+              src={blogData.bannerImage}
+              alt={blogData.title}
+              className={classes.bannerImage}
+            />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
+          <div
+            className={classes.blogContent}
+            dangerouslySetInnerHTML={{ __html: blogData.content }}
+          />
         </div>
       </div>
     )
