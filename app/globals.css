@@ -7,6 +7,9 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-text-primary);
 }
+.image-uploading > img {
+  width: 60rem !important;
+}
 
 :root {
   /* Colors */
