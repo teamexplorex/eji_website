@@ -3,18 +3,22 @@ import Package from "../ui/Package";
 import PackageFilter from "./PackageFilter";
 import classes from "./Packages.module.css";
 
-const Packages = ({isTitle=true}) => {
+const Packages = ({
+  isTitle = true,
+  title,
+  heading,
+  subheading,
+  isFilterShown,
+}) => {
   return (
     <Layout
-      title={isTitle ? "-: Find Experiences :-": ""}
-      heading={"Discover Destinations for Every Passion"}
-      subheading={
-        "Explore a diverse array of locations tailored to your interests, whether you seek adventure, relaxation, culture, or culinary delights, ensuring there's a perfect getaway for every traveler."
-      }
+      title={isTitle ? title : ""}
+      heading={heading}
+      subheading={subheading}
       style={{ boxShadow: "none" }}
     >
       <div className={classes.packageContainer}>
-        <PackageFilter />
+        {isFilterShown ? <PackageFilter /> : <></>}
         <div className={`${classes.packages} ${classes.web_packages}`}>
           <Package arrowButtons={true} />
           <Package arrowButtons={true} />

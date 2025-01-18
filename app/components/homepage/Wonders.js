@@ -35,28 +35,42 @@ const Label = ({ title }) => (
 
 const Wonders = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [showSeventhContinent, setShowSeventhContinent] = useState(true); // Start with true to show the 6th continent first
+  const [isHovering, setIsHovering] = useState(false); // New state for hover
   const router = useRouter();
 
   useEffect(() => {
-    // Only run on the client
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 874);
     };
 
-    checkScreenSize(); // Initial check
+    checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
+  useEffect(() => {
+    if (isHovering) return; // Pause the interval when hovering
+
+    const interval = setInterval(() => {
+      setShowSeventhContinent((prev) => !prev); // Toggle visibility
+    }, 3000); // Toggle every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isHovering]); // Depend on hover state
+
+  const handleMouseEnter = () => setIsHovering(true); // Hover starts
+  const handleMouseLeave = () => setIsHovering(false); // Hover ends
+
   return (
     <Layout
-      title={isLargeScreen ? "" : "-: Find Experiences :-"}
-      heading={isLargeScreen ? "" : "Discover Adventures Awaiting You"}
+      title={isLargeScreen ? "" : "-: Embark on a Global Journey :-"}
+      heading={isLargeScreen ? "" : "Uncover the Wonders of Every Continent"}
       subheading={
         isLargeScreen
           ? ""
-          : "Uncover a world of exhilarating experiences and thrilling escapades that await just around the corner, inviting you to step out of your comfort zone and embrace the excitement of new adventures."
+          : "Explore the unique beauty of every continent. From Asia's rich traditions to Europe's stunning landscapes, Africa's wild wonders, and Oceania's serene islands, each corner of the world has a story. Choose a continent and start your adventure today!"
       }
       style={{ boxShadow: "none" }}
       src="/testimonial_banner.svg"
@@ -65,19 +79,12 @@ const Wonders = () => {
         <div className={classes.parent}>
           <div className={classes.firstHalf}>
             <div className={classes.div1}>
-              <h2>-: Adventure Awaits :-</h2>
+              <h2>-: Embark on a Global Journey :-</h2>
               <h3>
-                Discover the{" "}
-                <span className={classes.highlighted}>Wonders</span> of Every
-                Unique Continent with Us
+                Uncover the <span className={classes.highlighted}>Wonders</span> of Every Continent
               </h3>
               <p>
-                Discover the diverse wonders each continent has to offer, from
-                Asia’s vibrant cultures and historic landmarks to Europe’s
-                picturesque landscapes and architectural marvels. Journey across
-                Africa’s breathtaking natural reserves and exotic wildlife, or
-                lose yourself in the captivating allure breathtaking natural
-                reserves.
+              Explore the unique beauty of every continent. From Asia's rich traditions to Europe's stunning landscapes, Africa's wild wonders, and Oceania's serene islands, each corner of the world has a story. Choose a continent and start your adventure today!
               </p>
             </div>
             <div
@@ -107,12 +114,11 @@ const Wonders = () => {
           </div>
           <div className={classes.secondHalf}>
             <div
-              className={`${classes.div6} ${classes.web}`}
-              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
+              className={classes.div9}
+              style={{ background: `url('/wonders/6.svg')`, cursor: "pointer" }}
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
-              {" "}
-              <Label title="America" />
+              <Label title="Asia" />
             </div>
             <div
               className={classes.div7}
@@ -122,18 +128,28 @@ const Wonders = () => {
               <Label title="Oceania" />
             </div>
             <div
-              className={classes.div8}
-              style={{ background: `url('/wonders/5.svg')`, cursor: "pointer" }}
+              className={`${classes.div6} ${classes.web}`}
+              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
-              <Label title="Europe" />
+              <Label title="America" />
             </div>
             <div
-              className={classes.div9}
-              style={{ background: `url('/wonders/6.svg')`, cursor: "pointer" }}
+              className={classes.div8}
+              style={{
+                background: `url('${
+                  showSeventhContinent ? "/wonders/1.svg" : "/wonders/5.svg"
+                }')`,
+                cursor: "pointer",
+                transition: "opacity 0.5s ease-in-out",
+                opacity: 1,
+              }}
+              onMouseEnter={handleMouseEnter} // Hover start
+              onMouseLeave={handleMouseLeave} // Hover end
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
-              <Label title="Asia" />
+              {" "}
+              <Label title={showSeventhContinent ? "Antarctica" : "Europe"} />
             </div>
           </div>
         </div>

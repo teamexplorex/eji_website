@@ -7,7 +7,7 @@ const Testimonials = () => {
       title="-: Traveler Stories :-"
       heading={"What Our Travelers Say ?"}
       subheading={
-        "Hear firsthand experiences and heartfelt stories from our adventurers, sharing their unforgettable journeys and the moments that made their travels truly remarkable."
+        "Read real stories and heartfelt experiences from our travelers. From life-changing adventures to unforgettable moments, see how our journeys have created memories that last a lifetime."
       }
       style={{ boxShadow: "none" }}
       src="/testimonial_banner.svg"

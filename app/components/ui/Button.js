@@ -4,8 +4,9 @@ const Button = ({ text, src, style, imgStyle, onClick }) => {
   return (
     <button onClick={onClick} className={classes.btn} style={style}>
       {text}
-      <img src={src} style={imgStyle} />
+      {src && <img src={src} style={imgStyle} alt="icon" />}
     </button>
   );
 };
+
 export default Button;

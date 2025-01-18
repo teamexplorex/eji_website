@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Layout from "../Layout/PageLayout";
 import classes from "./Experiences.module.css";
 import { useRouter } from "next/navigation";
+import Marquee from "react-fast-marquee";
 
 const Label = ({ title }) => (
   <div style={{ width: "100%", height: "100%" }} className={classes.label}>
@@ -32,6 +33,69 @@ const Label = ({ title }) => (
   </div>
 );
 
+const EXPERIENCES = [
+  {
+    label: "Adventures",
+    web: "/experiences/2.svg",
+    mobile: "/experiences/adventures_mobile.svg",
+  },
+  {
+    label: "Beaches",
+    web: "/experiences/1.svg",
+    mobile: "/experiences/beaches_mobile.svg",
+  },
+  {
+    label: "Mountains",
+    web: "/experiences/3.svg",
+    mobile: "/experiences/mountains_mobile.svg",
+  },
+  {
+    label: "Wildlife",
+    web: "/experiences/4.svg",
+    mobile: "/experiences/wildlife_mobile.svg",
+  },
+  {
+    label: "Islands",
+    web: "/experiences/1.svg",
+    mobile: "/experiences/beaches_mobile.svg",
+  },
+  {
+    label: "Cruises",
+    web: "/experiences/3.svg",
+    mobile: "/experiences/mountains_mobile.svg",
+  },
+  {
+    label: "Luxury",
+    web: "/experiences/4.svg",
+    mobile: "/experiences/wildlife_mobile.svg",
+  },
+  {
+    label: "Honeymoon",
+    web: "/experiences/1.svg",
+    mobile: "/experiences/beaches_mobile.svg",
+  },
+  {
+    label: "Family Friendly",
+    web: "/experiences/2.svg",
+    mobile: "/experiences/adventures_mobile.svg",
+  },
+  {
+    label: "Festivals",
+    web: "/experiences/3.svg",
+    mobile: "/experiences/mountains_mobile.svg",
+  },
+  {
+    label: "Solo Travel",
+    web: "/experiences/4.svg",
+    mobile: "/experiences/wildlife_mobile.svg",
+  },
+  {
+    label: "Ski Holidays",
+    web: "/experiences/1.svg",
+    mobile: "/experiences/beaches_mobile.svg",
+  },
+];
+
 const Experiences = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const router = useRouter();
@@ -50,87 +114,63 @@ const Experiences = () => {
 
   return (
     <Layout
-      title="-: Find Experiences :-"
-      heading="Discover Adventures Awaiting You"
+      title="-: Explore New Horizons :-"
+      heading="Adventures Tailored Just for You"
       subheading={
-        "Uncover a world of exhilarating experiences and thrilling escapades that await just around the corner, inviting you to step out of your comfort zone and embrace the excitement of new adventures."
+        "Discover a world full of exciting experiences and unforgettable adventures waiting for you. Step out of your routine, explore new possibilities, and create memories that will stay with you forever."
       }
       src={isLargeScreen ? "/experiences_bg.svg" : ""}
       style={isLargeScreen ? {} : { boxShadow: "none" }}
     >
       <div>
         <div className={classes.experiences}>
-          <div
-            onClick={() => router.push("/experiences/asdfasdfa")}
-            style={{
-              background: `url("/experiences/1.svg")`,
-              cursor: "pointer",
-            }}
-            className={classes.first_experience}
-          >
-            <Label title="Beaches" />
-          </div>
-          <div
-            onClick={() => router.push("/experiences/asdfasdfa")}
-            style={{
-              background: `url("/experiences/2.svg")`,
-              cursor: "pointer",
-            }}
-            className={classes.second_experience}
-          >
-            <Label title="Adventure" />
-          </div>
-          <div
-            onClick={() => router.push("/experiences/asdfasdfa")}
-            style={{
-              background: `url("/experiences/3.svg")`,
-              cursor: "pointer",
-            }}
-            className={classes.first_experience}
-          >
-            <Label title="Mountains" />
-          </div>
-          <div
-            onClick={() => router.push("/experiences/asdfasdfa")}
-            style={{
-              background: `url("/experiences/4.svg")`,
-              cursor: "pointer",
-            }}
-            className={classes.second_experience}
-          >
-            <Label title="Wildlife" />
-          </div>
+          <Marquee pauseOnHover={true} speed={120}>
+            {EXPERIENCES.map((experience, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => router.push("/experiences/asdfasdfa")}
+                  style={{
+                    background: `url("${experience.web}")`,
+                    cursor: "pointer",
+                  }}
+                  className={
+                    index % 2 === 0 && index !== EXPERIENCES.length
+                      ? classes.first_experience
+                      : classes.second_experience
+                  }
+                >
+                  <Label title={experience.label} />
+                </div>
+              );
+            })}
+          </Marquee>
         </div>
-        <div className={classes.mobile_version}>
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() => router.push("/experiences/asdfasdfa")}
-          >
-            <img src="/experiences/beaches_mobile.svg" />
-            <p>Adventures</p>
-          </div>
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() => router.push("/experiences/asdfasdfa")}
-          >
-            <img src="/experiences/adventures_mobile.svg" />
-            <p>Mountains</p>
-          </div>
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() => router.push("/experiences/asdfasdfa")}
-          >
-            <img src="/experiences/mountains_mobile.svg" />
-            <p>Wildlife</p>
-          </div>
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={() => router.push("/experiences/asdfasdfa")}
-            className={classes.experiences_last}
-          >
-            <img src="/experiences/wildlife_mobile.svg" />
-            <p>Beaches</p>
-          </div>
+        <div className={classes.mobile}>
+          <Marquee pauseOnHover={true} speed={90}>
+            <div>
+              <div className={classes.mobile_version}>
+                {EXPERIENCES.map((experience, index) => {
+                  return (
+                    <div
+                      style={{
+                        cursor: "pointer",
+                        marginRight:
+                          index === EXPERIENCES.length - 1 ? "1rem" : "0rem",
+                      }}
+                      key={index}
+                      onClick={() => router.push("/experiences/asdfasdfa")}
+                    >
+                      <img src={experience.mobile} />
+                      <div>
+                        <p>{experience.label}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </Marquee>
         </div>
       </div>
     </Layout>

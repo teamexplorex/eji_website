@@ -21,19 +21,11 @@ const WhyChooseUs = () => {
   return (
     <Layout
       title={isLargeScreen ? "" : "-: Travellers Choice :-"}
-      heading={
-        isLargeScreen
-          ? ""
-          : "Why Travelers Choose Us for Exceptional Adventures"
-      }
+      heading={isLargeScreen ? "" : "Why We're Your Perfect Travel Partner"}
       subheading={
         isLargeScreen
           ? ""
-          : `Escape to the peaks and experience breathtaking views and fresh
-            mountain air. Whether you're after adrenaline-pumping hikes or
-            serene escapes, our adventures promise unforgettable memories.
-            Embrace the thrill of the wild and create stories that last a
-            lifetime!.`
+          : `From seamless planning to unforgettable adventures, we're committed to turning every journey into a cherished experience. With personalized attention, curated itineraries, and a focus on creating lasting memories, we ensure every moment of your trip is truly extraordinary.`
       }
       style={{ boxShadow: "none", top: "0px" }}
       src="/experiences_bg.svg"
@@ -45,14 +37,14 @@ const WhyChooseUs = () => {
         <div className={classes.content}>
           <h2 className={classes.mobile}>-: Travellers Choice :-</h2>
           <h3 className={classes.mobile}>
-            Why Travelers Choose Us for Exceptional Adventures
+            Why We're Your Perfect Travel Partner
           </h3>
           <p>
-            Escape to the peaks and experience breathtaking views and fresh
-            mountain air. Whether you're after adrenaline-pumping hikes or
-            serene escapes, our adventures promise unforgettable memories.
-            Embrace the thrill of the wild and create stories that last a
-            lifetime!.
+            From seamless planning to unforgettable adventures, we're committed
+            to turning every journey into a cherished experience. With
+            personalized attention, curated itineraries, and a focus on creating
+            lasting memories, we ensure every moment of your trip is truly
+            extraordinary.
           </p>
           <div className={classes.points}>
             <div>
@@ -63,10 +55,10 @@ const WhyChooseUs = () => {
                 />
               </span>
               <div>
-                <h4>24/7 Customer Support</h4>
+                <h4>Seamless Planning</h4>
                 <p>
-                  We're here for you 24/7, ensuring your travel needs are met
-                  anytime, anywhere.
+                  We handle every detail, from bookings to itineraries, ensuring
+                  a stress-free and smooth travel experience.
                 </p>
               </div>
             </div>
@@ -78,10 +70,10 @@ const WhyChooseUs = () => {
                 />
               </span>
               <div>
-                <h4>Exclusive Deals and Offers</h4>
+                <h4>Unmatched Value</h4>
                 <p>
-                  We're here for you 24/7, ensuring your travel needs are met
-                  anytime, anywhere.
+                  Enjoy exclusive deals and carefully curated packages designed
+                  to give you the best experiences at the best prices.
                 </p>
               </div>
             </div>
@@ -93,10 +85,10 @@ const WhyChooseUs = () => {
                 />
               </span>
               <div>
-                <h4>Expertly Curated Experiences</h4>
+                <h4>Your Journey, Our Priority</h4>
                 <p>
-                  We're here for you 24/7, ensuring your travel needs are met
-                  anytime, anywhere.
+                  Your satisfaction is our top priority. We’re dedicated to
+                  making every step of your journey unforgettable.
                 </p>
               </div>
             </div>

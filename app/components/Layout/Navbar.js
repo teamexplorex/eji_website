@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   const DESTINATIONS = [
-    "India",
+    "Antarctica",
     "Americas",
     "Africa",
     "Asia",
@@ -51,7 +51,7 @@ const Navbar = () => {
           </span>
         </div>
         <div>
-          50% off on Your Next Trip. !{" "}
+          Get 10% Off on Your First Trip !{" "}
           <span
             className={classes.bookYourTour}
             onClick={() => router.push("/packages")}
@@ -245,7 +245,7 @@ const Navbar = () => {
           </div>
           <div>
             <span className={classes.more_enquiry_text}>To More inquiry</span>
-            <span className={classes.number}>+3333-33333333</span>
+            <span className={classes.number}>+91-9711555505</span>
           </div>
         </div>
       </div>

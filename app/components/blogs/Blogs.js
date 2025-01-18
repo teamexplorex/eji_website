@@ -1,18 +1,15 @@
 import BlogsCard from "../ui/BlogsCard";
 import classes from "./Blogs.module.css";
 
-
 const Blogs = () => {
-
   return (
-    <div className={classes.blogs} >
+    <div className={classes.blogs}>
       <div>
-        <h2>Our Recent Blog posts</h2>
+        <h2>Unmissable Travel Stories & Insights</h2>
         <p>
-          Explore the world through our stories, guides, and expert tips crafted
-          just for you. Dive into unique experiences, travel insights, and
-          inspiration from our team. Let each blog bring you closer to your next
-          adventure!
+          Step into a world of adventure with our handpicked travel blogs. From
+          expert tips to hidden gems, discover everything you need to plan
+          unforgettable journeys and create memories that last a lifetime.
         </p>
       </div>
       <BlogsCard />

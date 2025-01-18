@@ -12,10 +12,7 @@ const Header = () => {
       <div className={classes.left}>
         <h1>Your Journey Begins Here</h1>
         <p>
-          From breathtaking landscapes to thrilling adventures, every journey
-          begins with a single step. Discover destinations that inspire, and
-          create memories that will last a lifetime. Your next adventure is
-          waiting—let's make it unforgettable
+        Embark on a journey of a lifetime. From uncovering hidden treasures to exploring iconic destinations, every moment is crafted to inspire. Create memories that stay with you forever—your adventure begins now.
         </p>
         <Button
           text="Explore Package"

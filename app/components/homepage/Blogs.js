@@ -5,10 +5,10 @@ import classes from "./Blogs.module.css";
 const Blogs = ({isTitleShown=true}) => {
   return (
     <Layout
-      title={isTitleShown ? "-: Travel Tales :-": ""}
-      heading={"Insights from Our Travel Community"}
+      title={isTitleShown ? "-: Travel Diaries :-": ""}
+      heading={"Stories, Tips, and Inspiration from Fellow Travelers"}
       subheading={
-        "Explore expert tips, inspiring stories, and valuable advice shared by fellow travelers, helping you navigate your own adventures and discover the world through their unique perspectives."
+        "Discover incredible journeys, expert advice, and travel inspiration shared by our community. From hidden gems to practical tips, these stories will ignite your wanderlust and help you plan unforgettable adventures."
       }
       style={{ boxShadow: "none" }}
     >

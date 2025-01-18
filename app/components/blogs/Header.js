@@ -6,14 +6,13 @@ const Header = () => {
       <div className={classes.package_header}>
         <div>
           <h1>
-            Explore the World: Your Guide to <br /> Unforgettable Travel
-            Adventures
+            Journey Awaits: Stories to Inspire Your <br />
+            Next Adventure
           </h1>
           <p>
-            Discover hidden gems, travel tips, and unforgettable journeys that
-            will inspire your next adventure. Whether you're seeking thrilling
-            experiences or serene escapes, our blog brings the world to your
-            fingertips.
+            Your passport to insider secrets, hidden gems, and travel
+            inspiration. Explore luxurious escapes, thrilling adventures, and
+            tips to craft journeys that you'll treasure forever.
           </p>
         </div>
       </div>
