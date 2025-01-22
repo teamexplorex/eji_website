@@ -13,10 +13,10 @@ const HomePage = () => {
       <Header />
       <Experiences />
       <Packages
-        title="-: Top Trending Destinations :-"
-        heading="Explore the World's Most Popular Spots"
+        title="-: Explore the World :-"
+        heading="Top Trending Destinations for Your Next Adventure"
         subheading={
-          "Experience the charm of world-renowned destinations and uncover hidden gems that offer unmatched beauty and adventure. From iconic landmarks to serene escapes, these trending locations promise unforgettable journeys and timeless memories."
+          "From exotic beaches to vibrant cities and serene mountain retreats, these destinations are gaining popularity among travelers worldwide. Whether you're seeking adventure, culture, luxury, or relaxation, our carefully selected trending spots offer something for everyone. Discover hidden gems and must-see locations that are shaping the future of travel."
         }
         isFilterShown={true}
       />
@@ -25,7 +25,7 @@ const HomePage = () => {
         title="-: Once-in-a-Year Events You Can't Miss :-"
         heading="Experience the Magic of Once-in-a-Lifetime Moments"
         subheading={
-          "Discover vibrant festival and event packages, from India's colorful Holi and grand Diwali to Japan's Cherry Blossom Festival and Germany's Oktoberfest. Don't miss these once-a-year celebrations—book now for unforgettable memories!"
+          "Immerse yourself in global culture with our Global Travel Festivals collection. From the vibrant Rio Carnival in Brazil to the enchanting lantern festivals of Vietnam, and from Spain's La Tomatina to India's Diwali and Germany's Oktoberfest, these celebrations offer a once-in-a-lifetime opportunity to experience the world's most exciting and colorful events."
         }
         isFilterShown={false}
       />
@@ -54,7 +54,7 @@ const HomePage = () => {
         title="-: Explore the Beauty of India :-"
         heading="Uncover the Wonders of Incredible India"
         subheading={
-          "Discover India's diverse landscapes, rich heritage, and vibrant culture. From Kerala's serene backwaters to the majestic Himalayas, Rajasthan's royal palaces to Goa's sunny beaches, embark on a journey through unforgettable experiences in this incredible land."
+          "From the majestic forts of Rajasthan to the serene backwaters of Kerala, the spiritual heart of Varanasi to the bustling streets of Delhi, our expertly crafted itineraries offer a deep dive into the beauty and charm of India. Discover iconic landmarks, hidden gems, and authentic local experiences that will leave you with lasting memories."
         }
         isFilterShown={true}
       />

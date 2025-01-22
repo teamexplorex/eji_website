@@ -114,10 +114,10 @@ const Experiences = () => {
 
   return (
     <Layout
-      title="-: Explore New Horizons :-"
-      heading="Adventures Tailored Just for You"
+      title="-: Unforgettable Journeys :-"
+      heading="Explore Our Experiential Travel Packages"
       subheading={
-        "Discover a world full of exciting experiences and unforgettable adventures waiting for you. Step out of your routine, explore new possibilities, and create memories that will stay with you forever."
+        "Perfectly curated for adventure seekers, cultural enthusiasts, and wanderers at heart, our experiences ensure a deeper connection with the places you visit. Let us help you turn your travels into extraordinary stories."
       }
       src={isLargeScreen ? "/experiences_bg.svg" : ""}
       style={isLargeScreen ? {} : { boxShadow: "none" }}

@@ -70,7 +70,7 @@ const Wonders = () => {
       subheading={
         isLargeScreen
           ? ""
-          : "Explore the unique beauty of every continent. From Asia's rich traditions to Europe's stunning landscapes, Africa's wild wonders, and Oceania's serene islands, each corner of the world has a story. Choose a continent and start your adventure today!"
+          : "Explore the world’s iconic and hidden gems, from South America’s rainforests to Africa’s savannas, Europe’s history, and Asia’s vibrant cultures. Discover adventure, culture, and natural beauty—one unforgettable journey at a time."
       }
       style={{ boxShadow: "none" }}
       src="/testimonial_banner.svg"
@@ -84,7 +84,7 @@ const Wonders = () => {
                 Uncover the <span className={classes.highlighted}>Wonders</span> of Every Continent
               </h3>
               <p>
-              Explore the unique beauty of every continent. From Asia's rich traditions to Europe's stunning landscapes, Africa's wild wonders, and Oceania's serene islands, each corner of the world has a story. Choose a continent and start your adventure today!
+              Explore the world’s iconic and hidden gems, from South America’s rainforests to Africa’s savannas, Europe’s history, and Asia’s vibrant cultures. Discover adventure, culture, and natural beauty—one unforgettable journey at a time.
               </p>
             </div>
             <div
@@ -93,7 +93,7 @@ const Wonders = () => {
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
-              <Label title="Uae" />
+              <Label title="Asia" />
             </div>
             <div
               className={classes.div4}
@@ -101,7 +101,7 @@ const Wonders = () => {
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
-              <Label title="Africa" />
+              <Label title="Europe" />
             </div>
             <div
               className={`${classes.div6} ${classes.mobile}`}
@@ -109,16 +109,16 @@ const Wonders = () => {
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
-              <Label title="America" />
+              <Label title="Africa" />
             </div>
           </div>
           <div className={classes.secondHalf}>
             <div
-              className={classes.div9}
+          className={`${classes.div9} ${classes.web}`}
               style={{ background: `url('/wonders/6.svg')`, cursor: "pointer" }}
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
-              <Label title="Asia" />
+              <Label title="Africa" />
             </div>
             <div
               className={classes.div7}
@@ -126,13 +126,6 @@ const Wonders = () => {
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
               <Label title="Oceania" />
-            </div>
-            <div
-              className={`${classes.div6} ${classes.web}`}
-              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
-            >
-              <Label title="America" />
             </div>
             <div
               className={classes.div8}
@@ -149,7 +142,14 @@ const Wonders = () => {
               onClick={() => router.push("/destinations/asdfasdfa")}
             >
               {" "}
-              <Label title={showSeventhContinent ? "Antarctica" : "Europe"} />
+              <Label title={showSeventhContinent ? "South America" : "North America"} />
+            </div>
+            <div
+              className={`${classes.div6}`}
+              style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
+              onClick={() => router.push("/destinations/asdfasdfa")}
+            >
+              <Label title="Antarctica" />
             </div>
           </div>
         </div>
