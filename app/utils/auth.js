@@ -3,7 +3,7 @@ import { deleteCookie, getCookie } from 'cookies-next';
 
 export const logoutHandler = async () => {
   try {
-    await axios.post(process.env.NEXT_PUBLIC_API_URL + '/auth/logout', {
+    await axios.post(process.env.NEXT_PUBLIC_APP_URL + '/auth/logout', {
       accessToken: getCookie('accessToken')
     })
     deleteCookie("accessToken");

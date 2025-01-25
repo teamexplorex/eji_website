@@ -14,7 +14,7 @@ export const TABS = [
   "POLICY",
 ];
 
-const PackageDetailPage = () => {
+const PackageDetailPage = ({ packageData }) => {
   const [activeTab, setActiveTab] = useState(TABS[0]);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -27,15 +27,15 @@ const PackageDetailPage = () => {
     return () => clearTimeout(timeout); // Cleanup on component unmount
   }, []);
 
-  return (
+  return packageData && (
     <div>
-      <PackageHeader />
+      <PackageHeader packageData={packageData} />
       <PackageDetailTabs
         TABS={TABS}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-      <PackageDetails activeTab={activeTab} />
+      <PackageDetails activeTab={activeTab} packageData={packageData} />
 
       {/* Conditionally render the GetInTouch component as a popup */}
       {showPopup && <GetInTouch onClose={() => setShowPopup(false)} />}

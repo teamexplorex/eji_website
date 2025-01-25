@@ -7,6 +7,7 @@ const defaultDict = {
   isAuthenticated: false,
   user: null,
   isLoginPopupOpen: false,
+  openPayment: false
 };
 
 const initialState = getCookie("accessToken")

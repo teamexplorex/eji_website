@@ -7,7 +7,7 @@ let isRefresh = false
 const isTokenExpired = t => t && Date.now() >= jwtDecode(t).exp * 1000
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_APP_URL,
   headers: {
     'Content-Type': 'application/json',
     accept: 'application/json'

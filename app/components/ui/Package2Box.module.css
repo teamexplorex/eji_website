@@ -8,35 +8,27 @@
   padding: 1rem;
 }
 
-.package > div:nth-child(1) {
-  flex: 0.35;
-}
-
-.package > div:nth-child(2) {
-  flex: 0.4;
-}
-
-.package > div:nth-child(3) {
-  flex: 0.25;
-}
-
 .package_imageDetails {
   position: relative;
 }
 
-.package_imageDetails > div > img {
+.packageImage {
   height: 300px;
+  width: 270px;
   border-radius: 11px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important; 
 }
 
-.packageContent > h3 {
+.packageContent > div >h3 {
   color: var(--color-secondary);
   font-weight: 500;
   font-family: "Rubik";
   font-size: 1.4rem;
 }
 
-.packageContent > p {
+.packageContent > div >p {
   overflow-x: hidden;
   white-space: nowrap;
   color: var(--color-text-secondory);
@@ -57,12 +49,15 @@
 }
 
 .packageContent {
+  display: flex;
+  justify-content: space-between;
+ flex-direction: column;
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.packageContent > hr {
+.packageContent > div >hr {
   border: none;
   outline: none;
   background-color: var(--color-text-secondory);
@@ -80,15 +75,6 @@
 
 .stars > span > img {
   width: 1.5rem;
-}
-
-.topLeftStrip {
-  position: absolute;
-  top: 1rem;
-  background-color: var(--color-black); /* Black background */
-  color: var(--color-white); /* White text */
-  font-size: 0.8rem;
-  left: -1rem;
 }
 
 .bulletPoints > div > span:nth-child(2) {
@@ -196,7 +182,7 @@
 
 .topLeftStrip2 {
   position: absolute;
-  top: 3rem;
+  top: 1rem;
   background-color: var(--color-black); /* Black background */
   color: var(--color-white); /* White text */
   font-size: 0.8rem;

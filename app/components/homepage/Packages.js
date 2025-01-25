@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Layout from "../Layout/PageLayout";
 import Package from "../ui/Package";
 import PackageFilter from "./PackageFilter";
@@ -9,7 +11,9 @@ const Packages = ({
   heading,
   subheading,
   isFilterShown,
+  data,
 }) => {
+  const [active, setIsActive] = useState("");
   return (
     <Layout
       title={isTitle ? title : ""}
@@ -18,21 +22,27 @@ const Packages = ({
       style={{ boxShadow: "none" }}
     >
       <div className={classes.packageContainer}>
-        {isFilterShown ? <PackageFilter /> : <></>}
+        {/* {isFilterShown ? <PackageFilter active={active} setIsActive={setIsActive}/> : <></>} */}
         <div className={`${classes.packages} ${classes.web_packages}`}>
-          <Package arrowButtons={true} />
-          <Package arrowButtons={true} />
-          <Package arrowButtons={true} />
+          {data.slice(0, 3).map((data, index) => {
+            return <Package arrowButtons={true} key={index} data={data} />;
+          })}
         </div>
         <div className={classes.tab}>
           <div className={classes.packages}>
             <div className={classes.tab_packages1}>
-              <Package arrowButtons={true} />
-              <Package arrowButtons={true} />
+              {data.slice(0, 2).map((data, index) => {
+                return <Package arrowButtons={true} key={index} data={data} />;
+              })}
+
             </div>
             <div>
-              <Package arrowButtons={true} />
-              <Package arrowButtons={true} />
+              {data.length > 2 &&
+                data.slice(2, 4).map((data, index) => {
+                  return (
+                    <Package arrowButtons={true} key={index} data={data} />
+                  );
+                })}
             </div>
           </div>
         </div>

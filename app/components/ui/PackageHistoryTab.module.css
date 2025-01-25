@@ -151,17 +151,6 @@
     margin-right: 0.6rem;
 }
 
-.btns > button:nth-child(2) {
-    background-color: var( --color-white);
-    color: var(--color-primary);
-    margin-top: 0.5rem;
-    width: 12.5rem;
-    height: 3rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    margin-right: 0.6rem;
-    border: 1px solid var(--color-primary);
-}
 
 @media(max-width: 1040px){
 .mobileBtns {

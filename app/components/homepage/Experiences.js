@@ -38,61 +38,73 @@ const EXPERIENCES = [
     label: "Adventures",
     web: "/experiences/2.svg",
     mobile: "/experiences/adventures_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Beaches",
     web: "/experiences/1.svg",
     mobile: "/experiences/beaches_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Mountains",
     web: "/experiences/3.svg",
     mobile: "/experiences/mountains_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Wildlife",
     web: "/experiences/4.svg",
     mobile: "/experiences/wildlife_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Islands",
     web: "/experiences/1.svg",
     mobile: "/experiences/beaches_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Cruises",
     web: "/experiences/3.svg",
     mobile: "/experiences/mountains_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Luxury",
     web: "/experiences/4.svg",
     mobile: "/experiences/wildlife_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Honeymoon",
     web: "/experiences/1.svg",
     mobile: "/experiences/beaches_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Family Friendly",
     web: "/experiences/2.svg",
     mobile: "/experiences/adventures_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Festivals",
     web: "/experiences/3.svg",
     mobile: "/experiences/mountains_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Solo Travel",
     web: "/experiences/4.svg",
     mobile: "/experiences/wildlife_mobile.svg",
+    slug: 'all-inclusive'
   },
   {
     label: "Ski Holidays",
     web: "/experiences/1.svg",
     mobile: "/experiences/beaches_mobile.svg",
+    slug: 'all-inclusive'
   },
 ];
 
@@ -129,7 +141,7 @@ const Experiences = () => {
               return (
                 <div
                   key={index}
-                  onClick={() => router.push("/experiences/asdfasdfa")}
+                  onClick={() => router.push("/experiences/" + experience.slug)}
                   style={{
                     background: `url("${experience.web}")`,
                     cursor: "pointer",

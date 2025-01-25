@@ -90,7 +90,7 @@ const Wonders = () => {
             <div
               className={classes.div3}
               style={{ background: `url('/wonders/1.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               {" "}
               <Label title="Asia" />
@@ -98,7 +98,7 @@ const Wonders = () => {
             <div
               className={classes.div4}
               style={{ background: `url('/wonders/2.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               {" "}
               <Label title="Europe" />
@@ -106,7 +106,7 @@ const Wonders = () => {
             <div
               className={`${classes.div6} ${classes.mobile}`}
               style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               {" "}
               <Label title="Africa" />
@@ -116,14 +116,14 @@ const Wonders = () => {
             <div
           className={`${classes.div9} ${classes.web}`}
               style={{ background: `url('/wonders/6.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               <Label title="Africa" />
             </div>
             <div
               className={classes.div7}
               style={{ background: `url('/wonders/3.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               <Label title="Oceania" />
             </div>
@@ -139,7 +139,7 @@ const Wonders = () => {
               }}
               onMouseEnter={handleMouseEnter} // Hover start
               onMouseLeave={handleMouseLeave} // Hover end
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               {" "}
               <Label title={showSeventhContinent ? "South America" : "North America"} />
@@ -147,7 +147,7 @@ const Wonders = () => {
             <div
               className={`${classes.div6}`}
               style={{ background: `url('/wonders/4.svg')`, cursor: "pointer" }}
-              onClick={() => router.push("/destinations/asdfasdfa")}
+              onClick={() => router.push("/destinations/asia")}
             >
               <Label title="Antarctica" />
             </div>

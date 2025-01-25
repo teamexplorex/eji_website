@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import Button from "./Button";
 import classes from "./Package.module.css";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 
-const Package = () => {
+const Package = ({ data }) => {
   const router = useRouter();
 
   return (
@@ -12,32 +12,46 @@ const Package = () => {
       <div style={{ position: "relative" }}>
         <div className={classes.topLeftStrip2}>
           <div>
-            <img src="/icons/packageLocation.svg" alt="Location Icon" />
-            3 DAYS / 4 NIGHTS
+            <img src={"/icons/packageLocation.svg"} alt="Location Icon" />
+            {data.totalDays} DAYS / {data.totalNights} NIGHTS
           </div>
         </div>
 
-          <img src="/package.svg" alt="Package" className={classes.packageImage} />
+        <img
+          src={data.shortMainCardImage}
+          alt="Package"
+          className={classes.packageImage}
+        />
 
         <div className={classes.packageContent}>
-          <h3>The Allure Italy's Rich Culture, History, And Cuisine.</h3>
+          <h3>{data.name}</h3>
           <p>
-            4N Alexandria&nbsp; <HiOutlineArrowRight className={classes.icon} />
-            &nbsp; 3N Sharm el Sheikh&nbsp;{" "}
-            <HiOutlineArrowRight className={classes.icon} />
-            &nbsp; 2N Mansoura &nbsp;{" "}
-            <HiOutlineArrowRight className={classes.icon} />
-            &nbsp; 2N Mansoura
+            {data.stays.map((stay, index) => (
+              <span key={stay._id}>
+                {stay.nights}N {stay.cityName}
+                {index < data.stays.length - 1 && (
+                  <>
+                    &nbsp; <HiOutlineArrowRight className={classes.icon} />{" "}
+                    &nbsp;
+                  </>
+                )}
+              </span>
+            ))}
           </p>
+
           <hr />
           <div className={classes.priceDetails}>
             <div>
               <span>Starting From:</span>
-              <span className={classes.price}>₹ 75000</span>
-              <span>Taxes Incl/Pers</span>
+              <span className={classes.price}>₹ {data.actualPrice}</span>
+              <span>Taxes Included / Person</span>
             </div>
             <div>
-              <Button text="Book A Trip" src="/icons/airplane.svg" onClick={()=>router.push('/packages/asdfads')}></Button>
+              <Button
+                text="Book A Trip"
+                src="/icons/airplane.svg"
+                onClick={() => router.push("/packages/" + data.slug)}
+              ></Button>
             </div>
           </div>
         </div>

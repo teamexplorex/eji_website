@@ -7,7 +7,13 @@ import Testimonials from "../components/homepage/Testimonials";
 import Blogs from "../components/homepage/Blogs";
 import WhyChooseUs from "../components/homepage/WhyChooseUs";
 
-const HomePage = () => {
+const HomePage = ({
+  blogs,
+  exploreTheWorldPackages,
+  onceInAYearEventPackages,
+  dreamVacationPackages,
+  beautyOfIndiaPackages,
+}) => {
   return (
     <>
       <Header />
@@ -19,6 +25,7 @@ const HomePage = () => {
           "From exotic beaches to vibrant cities and serene mountain retreats, these destinations are gaining popularity among travelers worldwide. Whether you're seeking adventure, culture, luxury, or relaxation, our carefully selected trending spots offer something for everyone. Discover hidden gems and must-see locations that are shaping the future of travel."
         }
         isFilterShown={true}
+        data={exploreTheWorldPackages}
       />
       <Wonders />
       <Packages
@@ -28,6 +35,7 @@ const HomePage = () => {
           "Immerse yourself in global culture with our Global Travel Festivals collection. From the vibrant Rio Carnival in Brazil to the enchanting lantern festivals of Vietnam, and from Spain's La Tomatina to India's Diwali and Germany's Oktoberfest, these celebrations offer a once-in-a-lifetime opportunity to experience the world's most exciting and colorful events."
         }
         isFilterShown={false}
+        data={onceInAYearEventPackages}
       />
       <div
         className="parallax"
@@ -43,6 +51,7 @@ const HomePage = () => {
           "Grab the best travel deals that you simply can't ignore. From luxurious getaways to budget-friendly escapes, these offers are designed to make your dream trips affordable and unforgettable. Don't wait—seize these limited-time deals and start planning your next adventure today!"
         }
         isFilterShown={false}
+        data={dreamVacationPackages}
       />
       <div
         className="parallax"
@@ -56,6 +65,7 @@ const HomePage = () => {
         subheading={
           "From the majestic forts of Rajasthan to the serene backwaters of Kerala, the spiritual heart of Varanasi to the bustling streets of Delhi, our expertly crafted itineraries offer a deep dive into the beauty and charm of India. Discover iconic landmarks, hidden gems, and authentic local experiences that will leave you with lasting memories."
         }
+        data={beautyOfIndiaPackages}
         isFilterShown={true}
       />
       <Testimonials />
@@ -67,7 +77,7 @@ const HomePage = () => {
         {" "}
         <PromotionalPackageContent />
       </div>
-      <Blogs />
+      <Blogs blogs={blogs} />
     </>
   );
 };

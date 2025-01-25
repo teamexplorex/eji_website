@@ -1,27 +1,23 @@
 import classes from "./Tabs.module.css";
 
-const Tabs = () => {
+const Tabs = ({ activeTab, setActiveTab }) => {
   return (
     <div className={classes.packageDetailTabs}>
-      <span className={classes.active}>
-        <img src="/package-history/upcoming.svg" />
-        UPCOMING
-      </span>{" "}
-      |
-      <span>
+      <span
+        className={`${activeTab === "BOOKED" ? classes.active : ""}`}
+        onClick={() => setActiveTab("BOOKED")}
+      >
         {" "}
         <img src="/package-history/completed.svg" />
-        COMPLETED
+        Confirmed
       </span>{" "}
       |
-      <span>
+      <span
+        className={`${activeTab === "CANCELLED" ? classes.active : ""}`}
+        onClick={() => setActiveTab("CANCELLED")}
+      >
         {" "}
         <img src="/package-history/cancelled.svg" /> CANCELLED
-      </span>{" "}
-      |
-      <span>
-        <img src="/package-history/cancelled.svg" />
-        RECENTLY VIEWED
       </span>{" "}
     </div>
   );

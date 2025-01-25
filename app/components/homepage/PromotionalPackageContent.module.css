@@ -63,8 +63,6 @@
 .content  button {
     font-size: 1rem;
     border-radius: 5px;
-    width: 10rem;
-    height: 2.7rem;
     margin: auto;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -113,8 +111,6 @@
     }
 
     .content  button {
-        height: 2.2rem;
-        width: 9rem;
         font-size: 1rem;
     }
     

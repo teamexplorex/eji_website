@@ -7,6 +7,10 @@
   gap: 10px;
 }
 
+.tabs { 
+  display: none;
+}
+
 .packages {
   margin-top: 3rem;
 }

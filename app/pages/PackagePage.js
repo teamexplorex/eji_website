@@ -1,9 +1,14 @@
-import Tabs from "../components/Package-history/Tabs";
+"use client";
+
 import Header from "../components/package/Header";
-import Packages from "../components/package/Packages";
+import { useState } from "react";
+import { useParams } from "next/navigation";
+import { DESTINATIONS_KEYWORD } from "../utils/common";
 import Packages2 from "../components/package/Packages2";
+import Packages from "../components/experience/Packages";
 
 const PackagePage = ({ packageType }) => {
+  const params = useParams();
   return (
     <div>
       <Header />
@@ -11,7 +16,7 @@ const PackagePage = ({ packageType }) => {
         <Packages2 />
       ) : (
         <>
-          <Packages />
+          <Packages destination={DESTINATIONS_KEYWORD[params["id"]]} />
         </>
       )}
     </div>

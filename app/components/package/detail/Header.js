@@ -1,55 +1,50 @@
+"use client";
+import React from "react";
+
 import classes from "./Header.module.css";
 
-const PackageHeader = () => {
+const PackageHeader = ({ packageData }) => {
   return (
     <>
       <div className={classes.packageheader_container}>
         <div>
-          <h1>Uncover Bali: Culture, Cuisine & Coastlines</h1>
+          <h1>{packageData.name}</h1>
           <h2>
-            (₹63,817 / <span>per person</span>)
+            (₹{packageData.discountedPrice} / <span>per person</span>)
           </h2>
         </div>
         <div>
-          <span>
-            <img src="/packagedetail/customizable.svg" />
-            Customizable
-          </span>
-          |
-          <span>
-            <img src="/packagedetail/beach.svg" />
-            2N Anjuna
-          </span>
-          |
-          <span>
-            <img src="/packagedetail/hotel.svg" />
-            3N Palolem
-          </span>
+          {packageData.stays.map((stay, index) => (
+            <React.Fragment key={index}>
+              <span>
+                <img src="/packagedetail/customizable.svg" alt="Customizable" />
+                {stay.nights}N {stay.cityName}
+              </span>
+              {index !== packageData.stays.length - 1 && <>|</>}
+            </React.Fragment>
+          ))}
         </div>
       </div>
       <div className={`${classes["parent"]} ${classes["web"]}`}>
         <div
           className={classes["div1"]}
-          style={{ background: `url("/packagedetail/image1.svg")` }}
+          style={{ background: `url("${packageData?.images?.[0]}")` }}
         ></div>
         <div
           className={classes["div2"]}
-          style={{ background: `url("/packagedetail/image2.svg")` }}
+          style={{ background: `url("${packageData?.images?.[1]}")` }}
         ></div>
         <div
           className={classes["div3"]}
-          style={{ background: `url("/packagedetail/image3.svg")` }}
+          style={{ background: `url("${packageData?.images?.[2]}")` }}
         ></div>
         <div
           className={classes["div4"]}
-          style={{ background: `url("/packagedetail/image4.svg")` }}
+          style={{ background: `url("${packageData?.images?.[3]}")` }}
         ></div>
       </div>
       <div className={`${classes["mobile"]} ${classes["scrollable"]}`}>
         <img src="/packagedetail/image1.svg" />
-        {/* <div style={{ background: `url("/packagedetail/image2.svg")` }}></div>
-        <div style={{ background: `url("/packagedetail/image3.svg")` }}></div>
-        <div style={{ background: `url("/packagedetail/image4.svg")` }}></div> */}
       </div>
     </>
   );

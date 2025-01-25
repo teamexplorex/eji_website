@@ -10,6 +10,11 @@
   padding-right: 5rem;
 }
 
+.active {
+  background: var(--color-background) !important;
+  color: var(--color-white) !important;
+}
+
 .packageFilter > ul {
   overflow-x: auto; /* Enable horizontal scrolling */
   display: flex;
@@ -58,6 +63,7 @@
   padding-left: 14px;
   padding-right: 14px;
   font-size: 0.9rem;
+  cursor: pointer;
   border-radius: 8px;
   line-height: 24px;
   margin-right: 8px; /* Add spacing between items */

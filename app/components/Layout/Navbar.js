@@ -6,38 +6,76 @@ import { useSelector, useDispatch } from "react-redux";
 import SignupPopup from "../popups/PopupSignup";
 import { openLoginPopup } from "../../store/slices/authSlice";
 import StickyButtons from "./StickyButtons";
+import { logoutHandler } from "../../utils/auth";
+import Link from "next/link";
 
 const Navbar = () => {
-  const { isLoginPopupOpen, isAuthenticated } = useSelector(
-    (state) => state.auth
-  );
+  const { isLoginPopupOpen, user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const router = useRouter();
 
+  // const EXPERIENCES = [
+  //   { label: "Cruises", value: "CRUISES", slug: "cruises" },
+  //   { label: "Beaches", value: "BEACHES", slug: "beaches" },
+  //   { label: "Adventures", value: "ADVENTURES", slug: "adventures" },
+  //   { label: "Wildlife", value: "WILDLIFE", slug: "wildlife" },
+  //   { label: "Islands", value: "ISLANDS", slug: "islands" },
+  //   { label: "All Inclusive", value: "ALL_INCLUSIVE", slug: "all-inclusive" },
+  //   { label: "Romantic & Honeymoon", value: "ROMANTIC_AND_HONEYMOON", slug: "romantic-honeymoon" },
+  //   { label: "Indulgence & Luxury", value: "INDULGENCE_AND_LUXURY", slug: "indulgence-luxury" },
+  //   { label: "Family Friendly", value: "FAMILY_FRIENDLY", slug: "family-friendly" },
+  //   { label: "Festivals", value: "FESTIVALS", slug: "festivals" },
+  //   { label: "Solo Travel", value: "SOLO_TRAVEL", slug: "solo-travel" },
+  //   { label: "Ski Holidays", value: "SKI_HOLIDAYS", slug: "ski-holidays" },
+  //   { label: "Mountains", value: "MOUNTAINS", slug: "mountains" },
+  // ];
+
   const EXPERIENCES = [
-    "Cruises",
-    "Beaches",
-    "Adventures",
-    "Wildlife",
-    "Islands",
-    "All Inclusive",
-    "Romantic & Honeymoon",
-    "Indulgence & Luxury",
-    "Family Friendly",
-    "Festivals",
-    "Solo Travel",
-    "Ski Holidays",
-    "Mountains",
+    { label: "Cruises", value: "CRUISES", slug: "all-inclusive" },
+    { label: "Beaches", value: "BEACHES", slug: "all-inclusive" },
+    { label: "Adventures", value: "ADVENTURES", slug: "all-inclusive" },
+    { label: "Wildlife", value: "WILDLIFE", slug: "all-inclusive" },
+    { label: "Islands", value: "ISLANDS", slug: "all-inclusive" },
+    { label: "All Inclusive", value: "ALL_INCLUSIVE", slug: "all-inclusive" },
+    {
+      label: "Romantic & Honeymoon",
+      value: "ROMANTIC_AND_HONEYMOON",
+      slug: "all-inclusive",
+    },
+    {
+      label: "Indulgence & Luxury",
+      value: "INDULGENCE_AND_LUXURY",
+      slug: "all-inclusive",
+    },
+    {
+      label: "Family Friendly",
+      value: "FAMILY_FRIENDLY",
+      slug: "all-inclusive",
+    },
+    { label: "Festivals", value: "FESTIVALS", slug: "all-inclusive" },
+    { label: "Solo Travel", value: "SOLO_TRAVEL", slug: "all-inclusive" },
+    { label: "Ski Holidays", value: "SKI_HOLIDAYS", slug: "all-inclusive" },
+    { label: "Mountains", value: "MOUNTAINS", slug: "all-inclusive" },
   ];
 
+  // const DESTINATIONS = [
+  //   { label: "Asia", value: "ASIA", slug: "asia" },
+  //   { label: "Europe", value: "EUROPE", slug: "europe" },
+  //   { label: "Africa", value: "AFRICA", slug: "africa" },
+  //   { label: "Oceania", value: "OCEANIA", slug: "oceania" },
+  //   { label: "North America", value: "NORTH_AMERICA", slug: "north-america" },
+  //   { label: "South America", value: "SOUTH_AMERICA", slug: "south-america" },
+  //   { label: "Antarctica", value: "ANTARCTICA", slug: "antarctica" },
+  // ];
+
   const DESTINATIONS = [
-    "Antarctica",
-    "Americas",
-    "Africa",
-    "Asia",
-    "Oceania",
-    "Europe",
-    "UAE",
+    { label: "Asia", value: "ASIA", slug: "asia" },
+    { label: "Europe", value: "EUROPE", slug: "asia" },
+    { label: "Africa", value: "AFRICA", slug: "asia" },
+    { label: "Oceania", value: "OCEANIA", slug: "asia" },
+    { label: "North America", value: "NORTH_AMERICA", slug: "asia" },
+    { label: "South America", value: "SOUTH_AMERICA", slug: "asia" },
+    { label: "Antarctica", value: "ANTARCTICA", slug: "asia" },
   ];
 
   return (
@@ -74,13 +112,13 @@ const Navbar = () => {
       </div>
       <div className={classes.bottombar}>
         <div>
-          <a href="/">
+          <Link href="/">
             <img src="/logo.svg" className={classes.logo} />
-          </a>
+          </Link>
           <RxHamburgerMenu className={classes.hamburger} />
-          <a href="/">
+          <Link href="/">
             <img src="/mobile_logo.svg" className={classes.mobileLogo} />
-          </a>
+          </Link>
         </div>
         <div>
           <ul>
@@ -95,7 +133,9 @@ const Navbar = () => {
                 {EXPERIENCES.map((experience, index) => {
                   return (
                     <p
-                      onClick={() => router.push("/experiences/" + experience)}
+                      onClick={() =>
+                        router.push("/experiences/" + experience.slug)
+                      }
                       key={index}
                       className={
                         index === EXPERIENCES.length - 1
@@ -103,7 +143,9 @@ const Navbar = () => {
                           : ""
                       }
                     >
-                      <a href={"/experiences/" + experience}>{experience}</a>
+                      <Link href={"/experiences/" + experience.slug}>
+                        {experience.label}
+                      </Link>
                     </p>
                   );
                 })}
@@ -121,7 +163,7 @@ const Navbar = () => {
                   return (
                     <p
                       onClick={() =>
-                        router.push("/destinations/" + destination)
+                        router.push("/destinations/" + destination.slug)
                       }
                       key={index}
                       className={
@@ -130,7 +172,9 @@ const Navbar = () => {
                           : ""
                       }
                     >
-                      <a href={"/destinations/" + destination}>{destination}</a>
+                      <Link href={"/destinations/" + destination.slug}>
+                        {destination.label}
+                      </Link>
                     </p>
                   );
                 })}
@@ -169,54 +213,56 @@ const Navbar = () => {
                   onClick={() => router.push("https://planngo.travel/")}
                   className={classes.package_more}
                 >
-                  <a href="/packages">Packages</a>
+                  <Link href="/packages">Packages</Link>
                 </p>
                 <p onClick={() => router.push("/blogs")}>
-                  <a href="/blogs">Blogs</a>
+                  <Link href="/blogs">Blogs</Link>
                 </p>
                 <p onClick={() => router.push("/food")}>
-                  <a href="/food">Food</a>
+                  <Link href="/food">Food</Link>
                 </p>
                 <p onClick={() => router.push("/festival")}>
-                  <a href="/festival">Festival</a>
+                  <Link href="/festival">Festival</Link>
                 </p>
                 <p
                   onClick={() => router.push("https://planngo.travel/")}
                   className={classes.flights_more}
                 >
-                  <a href="https://planngo.travel/">Flights</a>
+                  <Link href="https://planngo.travel/">Flights</Link>
                 </p>
                 <p
                   onClick={() => router.push("https://planngo.travel/")}
                   className={classes.hotels_more}
                 >
-                  <a href="https://planngo.travel/">Hotels</a>
+                  <Link href="https://planngo.travel/">Hotels</Link>
                 </p>
                 <p onClick={() => router.push("https://planngo.travel/")}>
                   {" "}
-                  <a href="https://planngo.travel/">Sea Sightseeing</a>{" "}
+                  <Link href="https://planngo.travel/">
+                    Sea Sightseeing
+                  </Link>{" "}
                 </p>
                 <p onClick={() => router.push("https://planngo.travel/")}>
                   {" "}
-                  <a href="https://planngo.travel/">Visa</a>
+                  <Link href="https://planngo.travel/">Visa</Link>
                 </p>
                 <p onClick={() => router.push("https://planngo.travel/")}>
                   {" "}
-                  <a href="https://planngo.travel/">Transfers</a>
+                  <Link href="https://planngo.travel/">Transfers</Link>
                 </p>
                 <p onClick={() => router.push("/about")}>
                   {" "}
-                  <a href="/about">About Us</a>
+                  <Link href="/about">About Us</Link>
                 </p>
                 <p onClick={() => router.push("/faq")}>
-                  <a href="/faq">FAQs</a>
+                  <Link href="/faq">FAQs</Link>
                 </p>
                 <p
                   onClick={() => router.push("/contact")}
                   className={classes.lastElement}
                 >
                   {" "}
-                  <a href="/contact">Contact Us</a>
+                  <Link href="/contact">Contact Us</Link>
                 </p>
               </div>
             </li>
@@ -224,18 +270,39 @@ const Navbar = () => {
         </div>
         <div className={classes.contact}>
           <div>
-            <span
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                if (isAuthenticated) {
+            <>
+              <span
+                style={{ cursor: "pointer", marginRight: "8px" }}
+                onClick={() => {
                   router.push("/booking-history");
-                } else {
-                  dispatch(openLoginPopup(true));
-                }
-              }}
-            >
-              <img src="/icons/profile.svg" />
-            </span>
+                }}
+              >
+                <img src="/icons/ticket.svg" />
+              </span>
+              {user ? (
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    logoutHandler();
+                  }}
+                >
+                  <img src="/icons/logout.svg" />
+                </span>
+              ) : (
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    if (user) {
+                      router.push("/booking-history");
+                    } else {
+                      dispatch(openLoginPopup(true));
+                    }
+                  }}
+                >
+                  <img src="/icons/profile.svg" />
+                </span>
+              )}
+            </>
             <span>
               <hr />
             </span>

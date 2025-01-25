@@ -1,11 +1,11 @@
 import BlogDetailComponent from "../components/blogs/BlogDetailComponent";
-import Blogs from "../components/homepage/Blogs";
+import RandomBlogs from "../components/blogs/RandomBlogs"
 
-const BlogDetail = () => {
+const BlogDetail = ({ blogData, randomBlogs }) => {
   return (
     <>
-      <BlogDetailComponent />
-      <Blogs isTitleShown={true}/>
+      <BlogDetailComponent blogData={blogData} />
+      <RandomBlogs isTitleShown={true} randomBlogs={randomBlogs}/>
     </>
   );
 };
