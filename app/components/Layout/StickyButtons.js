@@ -12,7 +12,7 @@ function StickyButtons() {
         <img src="/homeBottomMenuBar/home.svg" className={classes.icon} />
         Home
       </span>
-      <span onClick={() => router.push("https://planngo.travel/")}>
+      <span onClick={() => router.push("https://plan-n-go.in/")}>
         <img src="/homeBottomMenuBar/book.svg" className={classes.icon} />
         Flights
       </span>

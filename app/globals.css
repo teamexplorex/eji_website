@@ -55,3 +55,39 @@ body {
   width: 100%;
   margin-top: -3rem;
 }
+
+.react-datepicker-wrapper{
+  flex: 1 !important;
+}
+
+.react-datepicker-wrapper input{
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  flex-grow: 1;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.react-datepicker__header {
+  background-color: var( --color-primary) !important;
+}
+.react-datepicker__day-name, .react-datepicker__current-month, .react-datepicker__navigation-icon{
+  color: var(--color-white) !important;
+}
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+  fill: var( --color-primary) !important;
+  color: var( --color-primary) !important;
+}
+
+.react-datepicker__day--selected{
+  background-color: var( --color-primary) !important;
+}
+
+.react-datepicker-popper{
+  z-index: 1000 !important;
+}
+
+.react-datepicker__input-container > input{
+  font-weight: 500 !important;
+}

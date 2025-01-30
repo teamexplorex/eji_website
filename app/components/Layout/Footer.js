@@ -40,9 +40,9 @@ const Footer = () => {
           <li>Services</li>
           <li onClick={()=>router.push("/blogs")}>Blogs</li>
           <li onClick={()=>router.push("/packages")}>Packages</li>
-          <li onClick={()=>router.push("https://planngo.travel/")}>Flights</li>
-          <li onClick={()=>router.push("https://planngo.travel/")}>Hotels</li>
-          <li onClick={()=>router.push("https://planngo.travel/")}>Visa</li>
+          <li onClick={()=>router.push("https://plan-n-go.in/")}>Flights</li>
+          <li onClick={()=>router.push("https://plan-n-go.in/")}>Hotels</li>
+          <li onClick={()=>router.push("https://plan-n-go.in/")}>Visa</li>
         </ul>
         <ul className={classes.map}>
           <li>Contact Us</li>

@@ -4,13 +4,15 @@ import Button from "../ui/Button";
 import classes from "./HeaderForm.module.css";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const HeaderForm = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     from: "",
     to: "",
-    date: "",
+    date: new Date(),
     noOfPersons: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,8 +30,21 @@ const HeaderForm = () => {
 
   const submitButtonHandler = () => {
     const { from, to, date, noOfPersons } = formData;
-    if (!from || !to || !noOfPersons) {
+    if (!from || !to || !noOfPersons || !date) {
       toast.error("All fields are mandatory.");
+      return;
+    }
+    const currentDate = new Date();
+    // Check if the selected date is valid and not in the past
+    if (isNaN(date) || date <= currentDate) {
+      toast.error("Please select a valid future date.");
+      return;
+    }
+
+    if (from == to) return toast.error("Please select valid destination !");
+
+    if (noOfPersons <= 0) {
+      toast.error("No of Persons should be more than 0");
       return;
     }
     setIsSubmitting(true);
@@ -37,7 +52,7 @@ const HeaderForm = () => {
     router.push(
       `/packages?from=${encodeURIComponent(from)}&to=${encodeURIComponent(
         to
-      )}&date=${encodeURIComponent(date)}&noOfPersons=${noOfPersons}`
+      )}&date=${date.getTime()}&noOfPersons=${noOfPersons}`
     );
   };
 
@@ -74,13 +89,17 @@ const HeaderForm = () => {
         <label>Departure Month and Year : </label>
         <div>
           <img src="/icons/calendar.svg" alt="calendar icon" />
-          <input
-            type="month"
-            name="date"
-            placeholder="Select Month and Year"
-            className={classes.customDateInput}
-            value={formData.date}
-            onChange={inputChangeHandler}
+          <ReactDatePicker
+            selected={formData.date}
+            onChange={(date) =>
+              setFormData((prevData) => ({
+                ...prevData,
+                date: date,
+              }))
+            }
+            minDate={new Date()}
+            inputProps={{ readOnly: true, disabled: true }}
+            dateFormat="MMMM d, yyyy"
           />
         </div>
       </div>
@@ -94,8 +113,11 @@ const HeaderForm = () => {
             name="noOfPersons"
             placeholder="No Of Persons"
             value={formData.noOfPersons}
-            min="1"
-            onChange={inputChangeHandler}
+            min={1}
+            onChange={(e) => {
+              if (e.target.value < 0) return;
+              inputChangeHandler(e);
+            }}
           />
         </div>
       </div>
