@@ -13,3 +13,20 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+@media (max-width: 1205px) {
+  .packageInclusion_container {
+    margin-right: 0rem;
+  }
+}
+@media (max-width: 700px) {
+  .packagePolicy_container {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .packagePolicy_container {
+    font-size: 0.9rem;
+  }
+}

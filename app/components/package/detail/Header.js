@@ -13,16 +13,21 @@ const PackageHeader = ({ packageData }) => {
             (₹{packageData.discountedPrice} / <span>per person</span>)
           </h2>
         </div>
-        <div>
-          {packageData.stays.map((stay, index) => (
-            <React.Fragment key={index}>
-              <span>
-                <img src="/packagedetail/customizable.svg" alt="Customizable" />
-                {stay.nights}N {stay.cityName}
-              </span>
-              {index !== packageData.stays.length - 1 && <>|</>}
-            </React.Fragment>
-          ))}
+        <div className={classes.staysContainer}>
+          <div className={classes.staysScrollable}>
+            {packageData.stays.map((stay, index) => (
+              <React.Fragment key={index}>
+                <span>
+                  <img
+                    src="/packagedetail/customizable.svg"
+                    alt="Customizable"
+                  />
+                  {stay.nights}N {stay.cityName}
+                </span>
+                {index !== packageData.stays.length - 1 && <>|</>}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
       <div className={`${classes["parent"]} ${classes["web"]}`}>

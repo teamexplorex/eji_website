@@ -26,7 +26,6 @@ const CostAndValidity = ({ packageData }) => {
 
         <div>
           <Button text="Get A Callback" src="/icons/call.svg" />
-          <Button text="Inquire Now" src="/icons/inquire.svg" />
         </div>
       </div>
     </div>

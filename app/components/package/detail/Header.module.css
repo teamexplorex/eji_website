@@ -7,12 +7,52 @@
   padding-right: 5rem;
 }
 
+.packageheader_container > div :nth-child(1){
+  flex: 0.8;
+}
+
 .packageheader_container > div:nth-child(1) > h1 {
   font-family: "Rubik";
   font-weight: 600;
   color: var(--color-text-primary);
   font-size: 1.5rem;
 }
+
+.staysContainer {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.staysContainer::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.staysScrollable {
+  display: flex;
+  gap: 0.5rem; /* Space between items */
+}
+
+.staysScrollable > span {
+  background-color: var(--neutral-background);
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--color-text-primary);
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.staysScrollable > span > img {
+  width: 1rem;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
 
 .packageheader_container > div:nth-child(1) > h2 {
   font-family: "Rubik";

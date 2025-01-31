@@ -167,10 +167,14 @@
   .couponsCard, .priceDetails{
     display: none;
   }
+  .packageDetails_container > div > div{
+    flex: 1 !important;
+  }
 }
 @media (max-width: 950px) {
   .packageDetails_container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
 }
