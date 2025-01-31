@@ -122,12 +122,13 @@
 }
 .customizeHoliday {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .customizeHoliday > div > img {
   position: relative;
   top: 3px;
-  color: var(--color-secondory);
+  color: var(--color-secondary);
 }
 
 .prevPrice > span:nth-child(2) {
@@ -238,4 +239,48 @@
   top: 8px;
   margin-right: 5px;
   cursor: pointer;
+}
+
+@media(max-width: 1000px){
+  .packageContent > div >h3 {
+    font-size: 1.2rem;
+  }
+
+  .packageContent > div >p {
+    font-size: 0.8rem;
+  }
+
+  .bulletPoints > div > span {
+    font-size: 0.8rem;
+  }
+
+  .customizeHoliday > h4 {
+    font-size: 0.8rem;
+    position: relative;
+    top: 4px;
+  }
+
+  .customizeHoliday > div{
+    font-size: 0.8rem;
+  }
+
+  .customizeHoliday > div > img {
+    position: relative;
+    top: 4px;
+  }
+
+  .priceSection > span{
+    font-size: 0.8rem;
+  }
+  .priceCard > button {
+    height: 2rem;
+  }
+
+  .priceCard > button img{
+    width: 1rem;
+  }
+
+  .price > span, .excludingText{
+    font-size: 0.8rem;
+  }
 }

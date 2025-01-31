@@ -4,7 +4,7 @@
   border-radius: 8px;
   padding: 1rem;
   margin-right: 1rem;
-  width: 22rem;
+  width: 30%;
 }
 
 .filterIcon {
@@ -17,19 +17,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .title {
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-secondory);
+  color: var(--color-secondary);
 }
 
 .clearAll {
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-wrap: wrap;
   color: var(--color-green);
   font-size: 14px;
   text-decoration: underline;
@@ -54,6 +56,7 @@
 .searchBox {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -81,6 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   cursor: pointer;
 }
 
@@ -119,8 +123,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 14px;
-  color: var(--color-secondory);
+  color: var(--color-secondary);
 }
 
 .durationButtons,
@@ -128,8 +134,8 @@
 .priceButtons,
 .tourTypeButtons,
 .hotelButtons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
 }
@@ -222,4 +228,10 @@
 
 .clearAll:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1245px) {
+  .container {
+    display: none;
+  }
 }

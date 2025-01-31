@@ -1,0 +1,77 @@
+.aboutUs_header {
+    background: url("../../../public/aboutus/banner.jpg");
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 6rem;
+  }
+  
+  .aboutUs_header > div > h1 {
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+  .aboutUs_header > div > p {
+    width: 28rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+  @media (max-width: 900px) {
+    .aboutUs_header {
+      height: 50vh;
+      align-items: flex-start;
+      padding-top: 2rem;
+    }
+  
+    .aboutUs_header {
+      padding-left: 2rem;
+    }
+  
+    .aboutUs_header > div > p {
+      width: 100%;
+      width: 25rem;
+    }
+  
+    .aboutUs_header > div > h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .aboutUs_header {
+      height: 40vh;
+      align-items: flex-start;
+      padding-top: 4rem;
+    }
+  
+    .aboutUs_header > div > p {
+      width: 80%;
+    }
+  
+    .aboutUs_header > div > h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 523px) {
+    .aboutUs_header {
+      height: 35vh;
+      align-items: flex-start;
+      padding-top: 2rem;
+    }
+  
+    .aboutUs_header > div > p {
+      font-size: 0.8rem;
+    }
+  
+    .aboutUs_header > div > h1 {
+      font-size: 1rem;
+    }
+  }
+  

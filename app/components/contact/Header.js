@@ -1,13 +1,12 @@
 import React from "react";
-// import React, { useState } from "react";
 import Button from "../ui/Button";
 import Layout from "../Layout/PageLayout";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import EmailIcon from "@mui/icons-material/Email";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import classes from "./Header.module.css";
 
@@ -24,7 +23,6 @@ function Header() {
         additionalClasses={classes.layout}
         src="/testimonial_banner.svg"
       >
-        <Button text={"Contact Us"} />
         <section>
           <form action="">
             <h2>
@@ -80,22 +78,28 @@ function Header() {
             ></iframe>
             <span>
               <h6>Reach Us:</h6>
-              <h4><LocationOnIcon className={classes.icon1}/>Address :</h4>
               <p>
+                <img
+                  src="/icons/right_arrow.svg"
+                  className={classes.rightArrow}
+                />
                 SF-11, Ansal Fortune Arcade, K Block, K-27, Sector 18, Noida,
                 Uttar Pradesh 201301
               </p>
-              <h4><EmailIcon className={classes.icon1}/>E-mail us at :</h4>
-              <p>Info@eji.travel</p>
-              <h3>
-                Live Chat : Available 24/7 on our website for instant support.
-              </h3>
-              <div>
-                <InstagramIcon className={classes.icon1}/>
-                <FacebookIcon className={classes.icon1}/>
-                <XIcon className={classes.icon1}/>
-                <LinkedInIcon className={classes.icon1}/>
-              </div>
+              <p>
+                <img
+                  src="/icons/right_arrow.svg"
+                  className={classes.rightArrow}
+                />
+                Info@eji.travel
+              </p>
+              <p>
+                <img
+                  src="/icons/right_arrow.svg"
+                  className={classes.rightArrow}
+                />
+                +91-9711555505
+              </p>
             </span>
           </div>
         </section>

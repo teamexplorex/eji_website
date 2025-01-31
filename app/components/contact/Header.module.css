@@ -1,48 +1,35 @@
 .container {
   width: 100%;
   margin-bottom: 4rem;
-}
-
-.layout > button {
-  margin: auto;
-  padding: 1rem 4rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-  /* width: 10rem; */
-  /* padding-top: 1rem; */
-  /* padding-bottom: 1rem; */
+  margin-top: 2rem;
 }
 
 .container section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
   padding-right: 5rem;
+  margin-top: 2rem;
 }
 
 .container section div {
   width: 45%;
   display: flex;
   flex-direction: column;
-
-  /* justify-content: space-between; */
-  /* padding-left: 5rem; */
-  /* padding-right: 5rem; */
 }
 
 .container section div iframe {
   width: 100%;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
   height: 300px!important;
 }
 
 .container section div span {
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 5px 11.7px 0px #00000040;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 0.5rem;
   border: 1px solid #dcdcdc;
   padding: 1rem;
@@ -58,34 +45,36 @@
     padding-left: 0.5rem;
 }
 
+.rightArrow{
+  position: relative;
+  top: 7px;
+}
+
 .container section div span h6 {
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 15.8px;
   letter-spacing: -0.05em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #000000;
+  color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 
 .container section div span p {
-  font-family: Inter;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 17.4px;
   letter-spacing: -0.05em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #747474;
+  color: var(--color-text-secondory);
   margin-bottom: 1rem;
 }
 
 .container section div span h4 {
-  font-family: Inter;
   font-size: 14px;
   font-weight: 700;
   line-height: 17.22px;
@@ -105,7 +94,6 @@
 }
 
 .container section div span h3 {
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.1px;
@@ -119,30 +107,14 @@
 
 .container section form {
   width: 45%;
-  padding: 1rem;
-  /* background: linear-gradient(
-    148.95deg,
-    #ffffff -0.76%,
-    #ffe7d6 35.6%,
-    #ffe7f7 65.64%,
-    #ffdfd2 100%
-  ); */
+  padding: 1.5rem;
   background-color: #fcfcfc;
-  box-shadow: 0px 0px 8.7px 0px #00000040;
   border-radius: 0.5rem;
   position: relative;
   margin-left: 5rem;
 }
 
 .container section form > h2 {
-  /* z-index: -1; */
-  /* position: absolute; */
-  /* top: -1rem; */
-  /* right: -3rem; */
-  /* border-radius: 0.75rem; */
-  /* background-color: #ffddd0; */
-  /* width: 10rem; */
-  /* height: 10rem; */
   width: 100%;
   font-family: Poppins;
   font-size: 16px;
@@ -151,13 +123,12 @@
   text-align: justified;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #000000;
+  color: var(--color-secondary);
   padding-left: 1rem;
   margin-top: 1rem;
 }
 
 .container section form main {
-  /* background-color: white; */
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -189,6 +160,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   margin-bottom: 0.5rem;
+  color: var(--color-secondary);
   width: 100%;
 }
 
@@ -213,13 +185,13 @@
   text-align: justified;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #969ca6;
+  color: var(--color-text-secondory);
   border-radius: 0.25rem;
   outline: none;
 }
 
 .container section form main input {
-  border: 1px solid #969ca6;
+  border: 1px solid var(--color-text-secondory);
   margin-bottom: 1rem;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -251,22 +223,9 @@
   margin-left: auto;
   cursor: pointer;
 }
-
-@media (max-width: 1000px) {
-  .container section div span h3 {
-    width: 100%;
-  }
-  .container section div{
-    width: 42.5%;
-  }
-  .container section form{
-    width: 42.5%;
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0;
   }
   .container section div {
@@ -276,6 +235,16 @@
     /* padding-right: 3rem; */
   }
 
+  .container{
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .container section div iframe {
+    margin-top: 0rem;
+  }
+  .container section form {
+    padding: 0.5rem;
+  }
   .container section form {
     width: 90%;
     margin: auto;

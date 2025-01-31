@@ -6,7 +6,7 @@ import Navbar from "../Layout/Navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "../Layout/Footer";
 import classes from "./Layout.module.css";
-import LayoutConfig from './LayoutConfig'
+import LayoutConfig from "./LayoutConfig";
 
 const queryClient = new QueryClient({
   defaultOptions: {

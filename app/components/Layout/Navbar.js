@@ -258,9 +258,7 @@ const Navbar = () => {
                   </p>
                   <p onClick={() => router.push("https://plan-n-go.in/")}>
                     {" "}
-                    <Link href="https://plan-n-go.in/">
-                      Sea Sightseeing
-                    </Link>{" "}
+                    <Link href="https://plan-n-go.in/">Sightseeing</Link>{" "}
                   </p>
                   <p onClick={() => router.push("https://plan-n-go.in/")}>
                     {" "}

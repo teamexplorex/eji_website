@@ -2,19 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  background: #ffffff;
+  background: var(--color-white);
   box-shadow: 0px 6px 39px 0px #00000026;
   border-radius: 2rem;
-
   width: 500px;
-  height: 420px;
-  margin: 0;
   position: fixed;
-  top: calc(50vh - 210px);
-  /* margin-bottom: calc(50vh + 250px); */
-  left: calc(50vw - 250px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center perfectly */
   z-index: 100;
-
   padding: 1rem;
 }
 
@@ -40,12 +36,7 @@
   font-weight: 600;
   line-height: 30px;
   text-align: justified;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-
-  color: #2d2d2d;
-
-  /* margin-bottom: auto; */
+  color: var(--color-secondary);
 }
 
 .popup h5 {
@@ -56,8 +47,8 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #2d2d2d;
-  margin-bottom: auto;
+  color: var(--color-text-secondory);
+  margin-bottom: 2rem;
 }
 
 .popup label {
@@ -68,19 +59,19 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #2d2d2d;
+  color: var(--color-secondary);
   width: 100%;
   margin-bottom: 0.5rem;
 }
 
 .popup b {
-  color: #ff8255;
+  color: var(--color-primary);
 }
 
 .popup input {
   outline: none;
-  border: 1px solid #2d2d2d;
-  color: #2d2d2d;
+  border: 1px solid var(--color-text-secondory);
+  color: var(--color-secondary);
   font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
@@ -102,7 +93,7 @@
   text-align: justified;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #969ca6;
+  color: var(--color-text-secondory);
 }
 
 .checkbox {
@@ -122,9 +113,9 @@
 }
 
 .icon {
-  color: white;
+  color: var(--color-white);
   border-radius: 50%;
-  background-color: #ff8255;
+  background-color: var(--color-primary);
   box-shadow: 0px 1px 4px 0px #00000033;
   padding: 0.25rem;
   font-size: 2.25rem;
@@ -147,55 +138,9 @@
   border-radius: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 569px) {
   .popup {
-    /* width: 450px; */
-    /* height: 400px; */
-    /* margin: 0; */
-    /* position: fixed; */
-    /* top: calc(50vh - 200px); */
-    /* margin-bottom: calc(50vh + 250px); */
-    /* left: calc(50vw - 225px); */
-    transform: scale(0.9);
-  }
-
-  .checkbox{
-    /* font-size: 0.8rem!important; */
+    width: 90%;
+    border-radius: 1rem;
   }
 }
-
-
-@media (max-width: 500px) {
-    .popup {
-      /* width: 400px;
-      height: 350px; */
-      /* margin: 0; */
-      /* position: fixed; */
-      /* top: calc(50vh - 170px); */
-      /* margin-bottom: calc(50vh + 250px); */
-      /* left: calc(50vw - 200px); */
-      transform: scale(0.75);
-    }
-  
-    .checkbox{
-      /* font-size: 0.7rem!important; */
-    }
-  }
-
-  
-@media (max-width: 400px) {
-    .popup {
-      /* width: 400px;
-      height: 350px; */
-      /* margin: 0; */
-      /* position: fixed; */
-      /* top: calc(50vh - 170px); */
-      /* margin-bottom: calc(50vh + 250px); */
-      /* left: calc(50vw - 200px); */
-      transform: scale(0.65);
-    }
-  
-    .checkbox{
-      /* font-size: 0.7rem!important; */
-    }
-  }
